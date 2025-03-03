@@ -1,195 +1,335 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <title>Sechay LLC</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
         <symbol id="table" viewBox="0 0 16 16">
-          <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm15 2h-4v3h4V4zm0 4h-4v3h4V8zm0 4h-4v3h3a1 1 0 0 0 1-1v-2zm-5 3v-3H6v3h4zm-5 0v-3H1v2a1 1 0 0 0 1 1h3zm-4-4h4V8H1v3zm0-4h4V4H1v3zm5-3v3h4V4H6zm4 4H6v3h4V8z"></path>
+            <path
+                d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm15 2h-4v3h4V4zm0 4h-4v3h4V8zm0 4h-4v3h3a1 1 0 0 0 1-1v-2zm-5 3v-3H6v3h4zm-5 0v-3H1v2a1 1 0 0 0 1 1h3zm-4-4h4V8H1v3zm0-4h4V4H1v3zm5-3v3h4V4H6zm4 4H6v3h4V8z">
+            </path>
         </symbol>
         <symbol id="collection" viewBox="0 0 16 16">
-          <path d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1h-7zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6v7zm1.5.5A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-13z"></path>
+            <path
+                d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1h-7zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6v7zm1.5.5A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-13z">
+            </path>
         </symbol>
         <symbol id="gear-fill" viewBox="0 0 16 16">
-          <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"></path>
+            <path
+                d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z">
+            </path>
         </symbol>
         <symbol id="speedometer" viewBox="0 0 16 16">
-          <path d="M8 2a.5.5 0 0 1 .5.5V4a.5.5 0 0 1-1 0V2.5A.5.5 0 0 1 8 2zM3.732 3.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707zM2 8a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8zm9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5zm.754-4.246a.389.389 0 0 0-.527-.02L7.547 7.31A.91.91 0 1 0 8.85 8.569l3.434-4.297a.389.389 0 0 0-.029-.518z"></path>
-          <path fill-rule="evenodd" d="M6.664 15.889A8 8 0 1 1 9.336.11a8 8 0 0 1-2.672 15.78zm-4.665-4.283A11.945 11.945 0 0 1 8 10c2.186 0 4.236.585 6.001 1.606a7 7 0 1 0-12.002 0z"></path>
+            <path
+                d="M8 2a.5.5 0 0 1 .5.5V4a.5.5 0 0 1-1 0V2.5A.5.5 0 0 1 8 2zM3.732 3.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707zM2 8a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8zm9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5zm.754-4.246a.389.389 0 0 0-.527-.02L7.547 7.31A.91.91 0 1 0 8.85 8.569l3.434-4.297a.389.389 0 0 0-.029-.518z">
+            </path>
+            <path fill-rule="evenodd"
+                d="M6.664 15.889A8 8 0 1 1 9.336.11a8 8 0 0 1-2.672 15.78zm-4.665-4.283A11.945 11.945 0 0 1 8 10c2.186 0 4.236.585 6.001 1.606a7 7 0 1 0-12.002 0z">
+            </path>
         </symbol>
-      </svg>
+    </svg>
     <nav class="navbar navbar-expand-md bg-dark sticky-top border-bottom" data-bs-theme="dark">
         <div class="container">
-          <a class="navbar-brand d-md" href="#">
-            Sechay
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="offcanvas" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasLabel">Aperture</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <a class="navbar-brand d-md" href="#">
+                Sechay
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"
+                aria-controls="offcanvas" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasLabel">Aperture</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body d-flex justify-content-end">
+                    <ul class="navbar-nav flex-grow-0 justify-content-between gap-3">
+                        <li class="nav-item"><a class="nav-link" href="#">
+                                <svg class="bi" width="24" height="24">
+                                    <use xlink:href="#aperture"></use>
+                                </svg>
+                            </a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#Services">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Solutions</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Careers</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                        <svg class="bi" width="24" height="24">
+                            <use xlink:href="#cart"></use>
+                        </svg>
+                        </a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="offcanvas-body d-flex justify-content-end">
-              <ul class="navbar-nav flex-grow-0 justify-content-between gap-3">
-                <li class="nav-item"><a class="nav-link" href="#">
-                  <svg class="bi" width="24" height="24"><use xlink:href="#aperture"></use></svg>
-                </a></li>
-                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="#Services">Services</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Solutions</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Careers</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-                  <svg class="bi" width="24" height="24"><use xlink:href="#cart"></use></svg>
-                </a></li>
-              </ul>
-            </div>
-          </div>
         </div>
-      </nav>
-      <div class="container col-xxl-8 px-4 py-5">
+    </nav>
+    <div class="container col-xxl-8 px-4 py-5">
         <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-          <div class="col-10 col-sm-8 col-lg-6">
-            <img src="https://getbootstrap.com/docs/5.3/examples/heroes/bootstrap-themes.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
-          </div>
-          <div class="col-lg-6">
-            <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Secure Your Data, Strengthen Your People, Secure Your Future</h1>
-            <p class="lead">Secure your business today with our comprehensive Access Management solutions. Contact us to learn more about how we can protect your digital assets while empowering your workforce.</p>
-          </div>
+            <div class="col-10 col-sm-8 col-lg-6">
+                <img src="https://getbootstrap.com/docs/5.3/examples/heroes/bootstrap-themes.png"
+                    class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+            </div>
+            <div class="col-lg-6">
+                <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Secure Your Data, Strengthen Your People,
+                    Secure Your Future</h1>
+                <p class="lead">Secure your business today with our comprehensive Access Management solutions. Contact
+                    us to learn more about how we can protect your digital assets while empowering your workforce.</p>
+            </div>
         </div>
-      </div>
-      <div class="container px-4 py-5" id="custom-cards">
+    </div>
+    <div class="container px-4 py-5" id="custom-cards">
         <h2 id="Services" class="pb-2 border-bottom">Services</h2>
         <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
-          <div class="col">
-            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('unsplash-photo-1.jpg'); transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.5)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.3)'; this.style.backgroundColor='white';">
-              <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">ForgeRock Access Management</h3>
-                <p>Comprehensive solutions for secure and scalable access control.</p>
-              </div>
+            <div class="col">
+                <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+                    style="background-image: url('unsplash-photo-1.jpg'); transition: transform 0.3s ease, box-shadow 0.3s ease;"
+                    onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.5)';"
+                    onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.3)'; this.style.backgroundColor='white';">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                        <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">ForgeRock Access Management</h3>
+                        <p>Comprehensive solutions for secure and scalable access control.</p>
+                    </div>
+                </div>
             </div>
-          </div>
 
-          <div class="col">
-            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('unsplash-photo-2.jpg'); transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.5)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.3)';">
-              <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">ForgeRock Identity Management</h3>
-                <p>Streamline identity lifecycle processes with advanced identity management.</p>
-              </div>
+            <div class="col">
+                <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+                    style="background-image: url('unsplash-photo-2.jpg'); transition: transform 0.3s ease, box-shadow 0.3s ease;"
+                    onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.5)';"
+                    onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.3)';">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                        <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">ForgeRock Identity Management</h3>
+                        <p>Streamline identity lifecycle processes with advanced identity management.</p>
+                    </div>
+                </div>
             </div>
-          </div>
-
-          <div class="col">
-            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('unsplash-photo-3.jpg'); transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.5)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.3)';">
-              <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-                <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">ForgeRock Identity Cloud</h3>
-                <p>Deliver secure and seamless experiences with cloud-native identity solutions.</p>
-              </div>
+            <div class="col">
+                <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+                    style="background-image: url('unsplash-photo-3.jpg'); transition: transform 0.3s ease, box-shadow 0.3s ease;"
+                    onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.5)';"
+                    onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.3)';">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                        <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">ForgeRock Identity Cloud</h3>
+                        <p>Deliver secure and seamless experiences with cloud-native identity solutions.</p>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-      <div class="row mx-lg-auto" data-masonry="{&quot;percentPosition&quot;: true }" style="position: relative; height: 1851.8px;" >
-        <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 0%; top: 0px;">
-          <div class="card" style="transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.5)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.3)'; ">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
-            <div class="card-body">
-              <h5 class="card-title">Card title that wraps to a new line</h5>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+    </div>
+    <div class="background-container">
+        <div class="container mt-5">
+            <h2 class="snapshot-title">Idnor Snapshot</h2>
+            <div class="row text-center">
+                <div class="col-md-3 col-6">
+                    <div class="snapshot-box">
+                        <div class="snapshot-number">40+</div>
+                        <p class="snapshot-text">years of experience in offering industry tailored solutions</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="snapshot-box">
+                        <div class="snapshot-number">90+</div>
+                        <p class="snapshot-text">global talent pool of expert consultants and advisors</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="snapshot-box">
+                        <div class="snapshot-number">10+</div>
+                        <p class="snapshot-text">Home to Oracle consultants with an average of years of technical
+                            experience</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="snapshot-box">
+                        <div class="snapshot-number">12+</div>
+                        <p class="snapshot-text">years of extensive experience in offering technical services</p>
+                    </div>
+                </div>
             </div>
-          </div>
+        </div>
+    </div>
+    <div class="reasons-section">
+        <div class="container mt-5">
+            <h2 class="reasons-title">Reasons to Choose Idnor</h2>
+            <div class="row text-center">
+                <div class="col-md-3 col-6">
+                    <div class="reason-card">
+                        <img src="http://idnor.com/wp-content/uploads/2022/09/Lower-operational-cost.webp"
+                            class="reason-image" alt="Lower operational cost">
+                        <p class="reason-text">Lower operational cost</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="reason-card">
+                        <img src="http://idnor.com/wp-content/uploads/2022/09/Reduced-downtime.webp"
+                            class="reason-image" alt="Reduced downtime">
+                        <p class="reason-text">Reduced downtime</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="reason-card">
+                        <img src="http://idnor.com/wp-content/uploads/2022/09/Accurate-budget-forecasting.webp"
+                            class="reason-image" alt="Accurate budget forecasting">
+                        <p class="reason-text">Accurate budget forecasting</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="reason-card">
+                        <img src="http://idnor.com/wp-content/uploads/2022/09/Access-to-best-resources-on-demand.webp"
+                            class="reason-image" alt="Access to best resources on-demand">
+                        <p class="reason-text">Access to best resources on-demand</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mx-lg-auto" data-masonry="{&quot;percentPosition&quot;: true }"
+        style="position: relative; height: 1851.8px;">
+        <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 0%; top: 0px;">
+            <div class="card" style="transition: transform 0.3s ease, box-shadow 0.3s ease;"
+                onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.5)';"
+                onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.3)'; ">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="200"
+                    xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap"
+                    preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6"
+                        dy=".3em">Image cap</text>
+                </svg>
+                <div class="card-body">
+                    <h5 class="card-title">Card title that wraps to a new line</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                        additional content. This content is a little bit longer.</p>
+                </div>
+            </div>
         </div>
         <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 0%; top: 361.6px;">
-          <div class="card p-3" style="transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.5)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.3)';">
-            <figure class="p-3 mb-0">
-              <blockquote class="blockquote">
-                <p>A well-known quote, contained in a blockquote element.</p>
-              </blockquote>
-              <figcaption class="blockquote-footer mb-0 text-body-secondary">
-                Someone famous in <cite title="Source Title">Source Title</cite>
-              </figcaption>
-            </figure>
-          </div>
+            <div class="card p-3" style="transition: transform 0.3s ease, box-shadow 0.3s ease;"
+                onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.5)';"
+                onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.3)';">
+                <figure class="p-3 mb-0">
+                    <blockquote class="blockquote">
+                        <p>A well-known quote, contained in a blockquote element.</p>
+                    </blockquote>
+                    <figcaption class="blockquote-footer mb-0 text-body-secondary">
+                        Someone famous in <cite title="Source Title">Source Title</cite>
+                    </figcaption>
+                </figure>
+            </div>
         </div>
         <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 0%; top: 532.2px;">
-          <div class="card" style="transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.5)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.3)';">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-              <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+            <div class="card" style="transition: transform 0.3s ease, box-shadow 0.3s ease;"
+                onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.5)';"
+                onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.3)';">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="200"
+                    xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap"
+                    preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6"
+                        dy=".3em">Image cap</text>
+                </svg>
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.
+                    </p>
+                    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                </div>
             </div>
-          </div>
         </div>
         <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 0%; top: 909.8px;">
-          <div class="card text-bg-primary text-center p-3" style="transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.5)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.3)';">
-            <figure class="mb-0">
-              <blockquote class="blockquote">
-                <p>A well-known quote, contained in a blockquote element.</p>
-              </blockquote>
-              <figcaption class="blockquote-footer mb-0 text-white">
-                Someone famous in <cite title="Source Title">Source Title</cite>
-              </figcaption>
-            </figure>
-          </div>
+            <div class="card text-bg-primary text-center p-3"
+                style="transition: transform 0.3s ease, box-shadow 0.3s ease;"
+                onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.5)';"
+                onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.3)';">
+                <figure class="mb-0">
+                    <blockquote class="blockquote">
+                        <p>A well-known quote, contained in a blockquote element.</p>
+                    </blockquote>
+                    <figcaption class="blockquote-footer mb-0 text-white">
+                        Someone famous in <cite title="Source Title">Source Title</cite>
+                    </figcaption>
+                </figure>
+            </div>
         </div>
         <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 0%; top: 1048.4px;">
-          <div class="card text-center" style="transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.5)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.3)';">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This card has a regular title and short paragraph of text below it.</p>
-              <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+            <div class="card text-center" style="transition: transform 0.3s ease, box-shadow 0.3s ease;"
+                onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.5)';"
+                onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.3)';">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This card has a regular title and short paragraph of text below it.</p>
+                    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                </div>
             </div>
-          </div>
         </div>
         <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 0%; top: 1226px;">
-          <div class="card" style="transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.5)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.3)';">
-            <svg class="bd-placeholder-img card-img" width="100%" height="260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Card image</text></svg>
-          </div>
+            <div class="card" style="transition: transform 0.3s ease, box-shadow 0.3s ease;"
+                onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.5)';"
+                onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.3)';">
+                <svg class="bd-placeholder-img card-img" width="100%" height="260" xmlns="http://www.w3.org/2000/svg"
+                    role="img" aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice"
+                    focusable="false">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6"
+                        dy=".3em">Card image</text>
+                </svg>
+            </div>
         </div>
         <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 0%; top: 1511.6px;">
-          <div class="card p-3 text-end" style="transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.5)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.3)';">
-            <figure class="mb-0">
-              <blockquote class="blockquote">
-                <p>A well-known quote, contained in a blockquote element.</p>
-              </blockquote>
-              <figcaption class="blockquote-footer mb-0 text-body-secondary">
-                Someone famous in <cite title="Source Title">Source Title</cite>
-              </figcaption>
-            </figure>
-          </div>
+            <div class="card p-3 text-end" style="transition: transform 0.3s ease, box-shadow 0.3s ease;"
+                onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.5)';"
+                onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.3)';">
+                <figure class="mb-0">
+                    <blockquote class="blockquote">
+                        <p>A well-known quote, contained in a blockquote element.</p>
+                    </blockquote>
+                    <figcaption class="blockquote-footer mb-0 text-body-secondary">
+                        Someone famous in <cite title="Source Title">Source Title</cite>
+                    </figcaption>
+                </figure>
+            </div>
         </div>
         <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 0%; top: 1650.2px;">
-          <div class="card" style="transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.5)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.3)';">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is another card with title and supporting text below. This card has some additional content to make it slightly taller overall.</p>
-              <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+            <div class="card" style="transition: transform 0.3s ease, box-shadow 0.3s ease;"
+                onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.5)';"
+                onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.3)';">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is another card with title and supporting text below. This card has some
+                        additional content to make it slightly taller overall.</p>
+                    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-      <div class="container">
+    </div>
+    <div class="container">
         <footer class="py-3 my-4">
-          <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Services</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Solutions</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Contact</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Careers</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
-          </ul>
-          <p class="text-center text-body-secondary">© 2024 Sechay LLC - ALL RIGHTS RESERVED</p>
+            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Services</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Solutions</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Contact</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Careers</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+            </ul>
+            <p class="text-center text-body-secondary">© 2024 Sechay LLC - ALL RIGHTS RESERVED</p>
         </footer>
-      </div>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
+        integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"
+        async></script>
 
 </body>
+
 </html>
