@@ -47,6 +47,7 @@
     font-weight: bold;
     color: #1a237e;
 }
+
 .feature-icon-small {
     width: 3rem; /* Set a fixed width */
     height: 3rem; /* Set a fixed height */
@@ -55,4 +56,31 @@
     justify-content: center; /* Horizontally center the icon */
     border-radius: 0.75rem; /* Rounded corners */
     font-size: 1.5rem; /* Adjust icon size */
+}
+
+/* 
+Contact us */
+
+.work-with-us {
+    background: linear-gradient(90deg, #e7d7ec, #0890df);
+    color: white;
+    padding: 50px 20px;
+}
+.form-control {
+    background-color: white;
+    color: #333;
+}
+.submit-btn {
+    background-color: white;
+    color: #F82F55;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.submit-btn:hover {
+    background-color: #fdd;
 }
