@@ -1,0 +1,25 @@
+.background-container {
+    background: linear-gradient(to right, #ffffff, #dde1e7);
+    padding: 50px 0;
+}
+.snapshot-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #e91e63;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.snapshot-box {
+    text-align: center;
+    padding: 20px;
+    border-left: 4px solid #e91e63;
+    margin-bottom: 20px;
+}
+.snapshot-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #1a237e;
+}
+.snapshot-text {
+    color: #1a237e;
+}
