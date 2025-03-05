@@ -12,96 +12,142 @@
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-
 <body>
-    <nav class="navbar navbar-expand-md bg-dark sticky-top border-bottom" data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
-            <a class="navbar-brand d-md" href="#">
-                Sechay
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"
-                aria-controls="offcanvas" aria-label="Toggle navigation">
+            <a class="navbar-brand fw-bold" style="color: #0f7ed3;" href="#">SECHAY</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasLabel">Sechay LLC</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body d-flex justify-content-end">
-                    <ul class="navbar-nav flex-grow-0 justify-content-between gap-3">
-                        <li class="nav-item"><a class="nav-link" href="#">
-                                <svg class="bi" width="24" height="24">
-                                    <use xlink:href="#aperture"></use>
-                                </svg>
-                            </a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#Services">Services</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Solutions</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Careers</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-                        <svg class="bi" width="24" height="24">
-                            <use xlink:href="#cart"></use>
-                        </svg>
-                        </a></li>
-                    </ul>
-                </div>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown">Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">IAM Solutions</a></li>
+                            <li><a class="dropdown-item" href="#">Cybersecurity</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Case Studies</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+                </ul>
+                <button class="btn btn-dark ms-3">Contact Us</button>
             </div>
         </div>
     </nav>
-    <div class="container col-xxl-8 px-4 py-5">
-        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-            <div class="col-10 col-sm-8 col-lg-6">
-                <img src="https://getbootstrap.com/docs/5.3/examples/heroes/bootstrap-themes.png"
-                    class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
-            </div>
-            <div class="col-lg-6">
-                <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Secure Your Data, Strengthen Your People,
-                    Secure Your Future</h1>
-                <p class="lead">Secure your business today with our comprehensive Access Management solutions. Contact
-                    us to learn more about how we can protect your digital assets while empowering your workforce.</p>
-            </div>
+    <div class="hero-section">
+        <div class="floating-icons">
+            <i class="fas fa-lock icon1"></i>
+            <i class="fas fa-shield-alt icon2"></i>
+            <i class="fas fa-user-shield icon3"></i>
         </div>
+        <span class="badge bg-light text-dark py-5 px-2 mb-0">IDENTITY & ACCESS MANAGEMENT</span>
+        <h1 class="hero-title">Secure Identity Solutions for the Digital Enterprise</h1>
+        <p class="hero-subtitle">Sechay provides cutting-edge cybersecurity solutions focused on identity management, protecting your organization's most valuable digital assets with precision and expertise.</p>
+        <button class="btn btn-custom me-2">Explore Our Services →</button>
+        <button class="btn btn-custom-light">Contact Us →</button>
     </div>
     <div class="container px-4 py-5" id="custom-cards">
         <h2 id="Services" class="pb-2 border-bottom">Services</h2>
-        <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+    
+        <!-- Responsive Card Row -->
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 py-5">
+            <!-- Service Card (Reusable Structure for All Services) -->
             <div class="col">
-                <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
-                    style="background-image: url('unsplash-photo-1.jpg'); transition: transform 0.3s ease, box-shadow 0.3s ease;"
-                    onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.5)';"
-                    onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.3)'; this.style.backgroundColor='white';">
-                    <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                        <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">ForgeRock Access Management</h3>
-                        <p>Comprehensive solutions for secure and scalable access control.</p>
+                <div class="card h-100 overflow-hidden rounded-4 shadow-lg service-card"
+                    style="background-color: white; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <div class="d-flex flex-column h-100 p-4 text-black">
+                        <!-- Icon and Heading -->
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="icon-container me-3" style="font-size: 3rem; color: #007bff;">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <h4 class="fw-bold">ForgeRock Identity Platform</h4>
+                        </div>
+    
+                        <!-- Animated List -->
+                        <ul class="list-unstyled service-points mt-3">
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> Access Management</li>
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> Identity Management</li>
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> Identity Gateway</li>
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> Directory Services</li>
+                        </ul>
                     </div>
                 </div>
             </div>
-
+    
+            <!-- CyberArk Card -->
             <div class="col">
-                <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
-                    style="background-image: url('unsplash-photo-2.jpg'); transition: transform 0.3s ease, box-shadow 0.3s ease;"
-                    onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.5)';"
-                    onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.3)';">
-                    <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                        <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">ForgeRock Identity Management</h3>
-                        <p>Streamline identity lifecycle processes with advanced identity management.</p>
+                <div class="card h-100 overflow-hidden rounded-4 shadow-lg service-card"
+                    style="background-color: white; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <div class="d-flex flex-column h-100 p-4 text-black">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="icon-container me-3" style="font-size: 3rem; color: #0d6efd;">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h4 class="fw-bold">CyberArk</h4>
+                        </div>
+    
+                        <ul class="list-unstyled service-points mt-3">
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> Privileged Access Management</li>
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> Endpoint Privilege Security</li>
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> Identity Security</li>
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> Threat Detection</li>
+                        </ul>
                     </div>
                 </div>
             </div>
+    
+            <!-- Okta Card -->
             <div class="col">
-                <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
-                    style="background-image: url('unsplash-photo-3.jpg'); transition: transform 0.3s ease, box-shadow 0.3s ease;"
-                    onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.5)';"
-                    onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.3)';">
-                    <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-                        <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">ForgeRock Identity Cloud</h3>
-                        <p>Deliver secure and seamless experiences with cloud-native identity solutions.</p>
+                <div class="card h-100 overflow-hidden rounded-4 shadow-lg service-card"
+                    style="background-color: white; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <div class="d-flex flex-column h-100 p-4 text-black">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="icon-container me-3" style="font-size: 3rem; color: #ed8936;">
+                                <i class="fas fa-user-check"></i>
+                            </div>
+                            <h4 class="fw-bold">Okta</h4>
+                        </div>
+    
+                        <ul class="list-unstyled service-points mt-3">
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> Single Sign-On (SSO)</li>
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> Multi-Factor Authentication</li>
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> Lifecycle Management</li>
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> API Access Management</li>
+                        </ul>
                     </div>
                 </div>
             </div>
+    
+            <!-- Azure AD Card -->
+            <div class="col">
+                <div class="card h-100 overflow-hidden rounded-4 shadow-lg service-card"
+                    style="background-color: white; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <div class="d-flex flex-column h-100 p-4 text-black">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="icon-container me-3" style="font-size: 3rem; color: #0078d4;">
+                                <i class="fab fa-microsoft"></i>
+                            </div>
+    
+                            <h4 class="fw-bold">Azure AD</h4>
+                        </div>
+    
+                        <ul class="list-unstyled service-points mt-3">
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> Identity Governance</li>
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> Azure AD B2C</li>
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> Hybrid Identity</li>
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> Conditional Access</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    
         </div>
     </div>
+    
     <div class="background-container">
         <div class="container mt-5">
             <h2 class="snapshot-title">Sechay Snapshot</h2>
@@ -302,7 +348,10 @@
         <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5">
             <div class="col d-flex flex-column align-items-start gap-2">
                 <h2 class="fw-bold text-body-emphasis">Join our family of IT-holics</h2>
-                <p class="text-body-secondary">Sechay LLC is a world-class team of IT professionals who work hard and celebrate success. We encourage life-long career development, offer competitive salary, overall compensation and benefits, and greatly value our employees. We are continuously looking to acquire the brightest and most talented in the industry and give them career defining challenges!.</p>
+                <p class="text-body-secondary">Sechay LLC is a world-class team of IT professionals who work hard and
+                    celebrate success. We encourage life-long career development, offer competitive salary, overall
+                    compensation and benefits, and greatly value our employees. We are continuously looking to acquire
+                    the brightest and most talented in the industry and give them career defining challenges!.</p>
                 <a href="#" class="btn btn-primary btn-lg">Join Us!</a>
             </div>
 
@@ -352,7 +401,9 @@
             <div class="row">
                 <div class="col-md-6">
                     <h2>Work with Us:</h2>
-                    <p>Put identity security at the core of securing your business. Contact us today and we will put you in touch with one of our IAM experts to discuss how you can take full advantage of our flexible security solutions.</p>
+                    <p>Put identity security at the core of securing your business. Contact us today and we will put you
+                        in touch with one of our IAM experts to discuss how you can take full advantage of our flexible
+                        security solutions.</p>
                     <p><strong>Give us a call:</strong> Fill out the form on this page.</p>
                 </div>
                 <div class="col-md-6">
@@ -377,7 +428,7 @@
                             <textarea class="form-control" rows="3" placeholder="Comment"></textarea>
                         </div>
                         <button type="submit" class="submit-btn">
-                          Submit
+                            Submit
                         </button>
                     </form>
                 </div>
@@ -404,7 +455,7 @@
     <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
         integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"
         async></script>
-
+    <script src="script.js"></script>
 </body>
 
 </html>
