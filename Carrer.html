@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers | Join Our Team</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-size: larger;
+            font-family: 'Times New Roman', Times, serif;
+            background: linear-gradient(135deg, #e0f7fa, #f1f8e9);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 2rem 1rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+        }
+
+        .job-listing {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .job-card {
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            transition: transform 0.3s;
+        }
+
+        .job-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .job-card h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .job-card p {
+            margin-bottom: 1rem;
+        }
+
+        .apply-btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: background 0.3s;
+        }
+
+        .apply-btn:hover {
+            background: #0056b3;
+        }
+
+        .cta {
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta .apply-btn {
+            font-size: 1.2rem;
+        }
+
+        .hero-section {
+            height: 100vh;
+            background: linear-gradient(135deg, #4e54c8, #8f94fb);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-content p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .explore-btn {
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            color: #4e54c8;
+            background: white;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .explore-btn:hover {
+            background: #f0f0f0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="hero-content">
+            <h1>Identity and Access Management</h1>
+            <p>We deliver cutting-edge Identity & Access Management (IAM) solutions, helping organizations secure and
+                manage digital identities effectively. Our expertise covers industry-leading platforms, including
+                ForgeRock, Ping Identity, CyberArk, Okta, and Azure AD, offering tailored solutions for seamless access,
+                robust security, and regulatory compliance. With a focus on innovation and customer satisfaction, Sechay
+                Services ensures your business stays secure and future-ready.</p>
+            <button class="explore-btn" onclick="scrollToServices()">Explore Services</button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="header" id="career">
+            <h1>Join Our Team</h1>
+            <p>We are always looking for talented individuals who want to make a difference.</p>
+        </div>
+
+        <div class="job-listing">
+            <div class="job-card">
+                <h2>Software Engineer</h2>
+                <p>Location: Remote</p>
+                <p>We are seeking a skilled software engineer to develop and maintain web applications using modern
+                    technologies.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            <div class="job-card">
+                <h2>Software Engineer</h2>
+                <p>Location: Remote</p>
+                <p>We are seeking a skilled software engineer to develop and maintain web applications using modern
+                    technologies.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            <div class="job-card">
+                <h2>Product Manager</h2>
+                <p>Location: New York, NY</p>
+                <p>Drive product strategy and collaborate with cross-functional teams to deliver innovative solutions.
+                </p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+
+            <div class="job-card">
+                <h2>UI/UX Designer</h2>
+                <p>Location: San Francisco, CA</p>
+                <p>Create intuitive and visually appealing user experiences across web and mobile platforms.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+
+            <div class="job-card">
+                <h2>Data Scientist</h2>
+                <p>Location: Remote</p>
+                <p>Analyze large datasets to drive data-informed decisions and deliver predictive analytics solutions.
+                </p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+        </div>
+
+        <div class="cta">
+            <h2>Don't see a position for you?</h2>
+            <p>We'd still love to hear from you. Send us your resume and tell us why you'd be a great fit!</p>
+            <a href="#" class="apply-btn">Submit Your Resume</a>
+        </div>
+    </div>
+    <script>
+         function scrollToServices() {
+            document.getElementById('career').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+
+</html>
