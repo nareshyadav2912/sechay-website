@@ -38,13 +38,9 @@
             }
         }
 
-
-        /* Remove dropdown arrows */
         .nav-link.dropdown-toggle::after {
             display: none !important;
         }
-
-        /* Align navbar items to the right */
         .navbar-collapse {
             justify-content: flex-end;
         }
@@ -55,7 +51,6 @@
             gap: 20px;
         }
 
-        /* Sticky navbar effect */
         .navbar {
             background-color: white;
             position: fixed;
@@ -70,7 +65,6 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        /* Underline animation on hover */
         .navbar-nav .nav-item .nav-link {
             position: relative;
             padding-bottom: 5px;
@@ -99,7 +93,6 @@
             padding: 0;
         }
 
-        /* Adjust dropdown items to blend with the navbar */
         .dropdown-menu .dropdown-item {
             padding: 8px 15px;
             background: white;
@@ -107,7 +100,6 @@
             transition: background-color 0.3s ease-in-out;
         }
 
-        /* Ensure dropdown appears properly */
         .dropdown:hover .dropdown-menu {
             display: block;
             margin-top: 0;
@@ -118,7 +110,7 @@
 <body>
     <nav class="navbar navbar-expand-lg  px-3 ">
         <div class="container">
-            <a class="navbar-brand" href="#">Sechay</a>
+            <a class="navbar-brand" href="index.html">Sechay</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -133,18 +125,18 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Ping Identity</a></li>
-                                <li><a class="dropdown-item" href="#">ForgeRock Identity Management</a></li>
-                                <li><a class="dropdown-item" href="#">IAM Managed Services</a></li>
-                                <li><a class="dropdown-item" href="#">Azure AD</a></li>
-                                <li><a class="dropdown-item" href="#">Okta</a></li>
+                                <li><a class="dropdown-item" href="services.html#ping">Ping Identity</a></li>
+                                <li><a class="dropdown-item" href="services.html#iam">ForgeRock Identity Management</a></li>
+                                <li><a class="dropdown-item" href="services.html#cyberark">CyberArk</a></li>
+                                <li><a class="dropdown-item" href="services.html#azure">Azure AD</a></li>
+                                <li><a class="dropdown-item" href="services.html#okta">Okta</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Blogs</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Careers</a></li>
-                                <li><a class="dropdown-item" href="#">Work with Us</a></li>
+                                <li><a class="dropdown-item" href="Carrer.html">Careers</a></li>
+                                <li><a class="dropdown-item" href="">Work with Us</a></li>
                                 <li><a class="dropdown-item" href="#">Something else here</a></li>
                             </ul>
                         </li>
@@ -153,12 +145,11 @@
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">Why Sechay</a></li>
                                 <li><a class="dropdown-item" href="#">Blogs</a></li>
-                               
                                 <li><a class="dropdown-item" href="#">Locations</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="btn btn-outline-primary" href="#">Contact Us</a>
+                            <a class="btn btn-outline-primary" href="index.html#contact">Contact Us</a>
                         </li>
                     </ul>
                 </div>

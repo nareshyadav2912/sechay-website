@@ -5,23 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Careers | Join Our Team</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <style>
         body {
-            margin: 0;
-            padding: 0;
-            font-size: larger;
             font-family: 'Times New Roman', Times, serif;
-            background: linear-gradient(135deg, #e0f7fa, #f1f8e9);
             color: #333;
-            line-height: 1.6;
         }
-
-        .container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 2rem 1rem;
-        }
-
         .header {
             text-align: center;
             margin-bottom: 3rem;
@@ -29,7 +19,6 @@
 
         .header h1 {
             font-size: 3rem;
-            margin-bottom: 0.5rem;
         }
 
         .header p {
@@ -41,13 +30,14 @@
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
-
         .job-card {
-            background: #fff;
-            border-radius: 20px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-            padding: 2rem;
-            transition: transform 0.3s;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 12px;
+            width: auto;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
         }
 
         .job-card:hover {
@@ -55,8 +45,71 @@
         }
 
         .job-card h2 {
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
+            margin: 0 0 10px;
+        }
+
+        .read-more-btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 16px;
+            color: white;
+            background-color: #007bff;
+            text-decoration: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            width: 80%;
+            max-width: 600px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            animation: slideIn 0.3s ease;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .close-btn {
+            position: relative;
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .job-details {
+            display: block;
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #007bff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         .job-card p {
@@ -65,6 +118,7 @@
 
         .apply-btn {
             display: inline-block;
+            text-align: center;
             padding: 0.8rem 1.5rem;
             background: #007bff;
             color: white;
@@ -98,31 +152,49 @@
 
         .hero-section {
             height: 100vh;
-            background: linear-gradient(135deg, #4e54c8, #8f94fb);
-            color: white;
+            background: url(Images/carrer.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: black;
+            background-position: center;
             display: flex;
             align-items: center;
-            justify-content: center;
-            text-align: center;
+            justify-content: left;
+            text-align: left;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .hero-content {
+            max-width: 80%;
         }
 
         .hero-content h1 {
-            font-size: 4rem;
+            max-width: 600px;
+            margin-left: 20px;
+            font-weight: bold;
+            color: rgb(255, 253, 253);
+            font-size: 3rem;
             margin-bottom: 1rem;
         }
 
         .hero-content p {
-            font-size: 1.5rem;
+            margin-left: 20px;
+            max-width: 570px;
+            text-align: left;
+            color: white;
+            font-size: 1.25rem;
             margin-bottom: 2rem;
         }
 
         .explore-btn {
-            padding: 1rem 2rem;
+            margin-left: 110px;
+            padding: 0.75rem 1.5rem;
             font-size: 1.2rem;
             color: #4e54c8;
             background: white;
             border: none;
-            border-radius: 30px;
+            border-radius: 40px;
             cursor: pointer;
             transition: background 0.3s;
         }
@@ -130,11 +202,74 @@
         .explore-btn:hover {
             background: #f0f0f0;
         }
+        @media (max-width: 768px) {
+            .hero-section {
+                justify-content: center;
+                text-align: center;
+            }
+
+            .hero-content {
+                max-width: 100%;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+                margin-left: 0;
+            }
+
+            .hero-content p {
+                margin-left: 0;
+                font-size: 1rem;
+            }
+
+            .explore-btn {
+                margin-left: 0;
+            }
+        }
+        @media (max-width: 768px) {
+            .job-card {
+                display: block;
+                width: 100%;
+                padding: 15px;
+            }
+
+            .read-more-btn {
+                padding: 6px 12px;
+            }
+
+            .modal-content {
+                width: 90%;
+                max-height: 70vh;
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            h2,
+            h3 {
+                font-size: 1.5rem;
+            }
+
+            .job-card {
+                padding: 10px;
+            }
+
+            .read-more-btn {
+                padding: 5px 10px;
+            }
+
+            .modal-content {
+                width: 100%;
+                max-height: 65vh;
+                padding: 15px;
+            }
+        }
     </style>
 </head>
 
 <body>
-    <!-- Hero Section -->
+    <div id="navbar-container"></div>
     <div class="hero-section">
         <div class="hero-content">
             <h1>Identity and Access Management</h1>
@@ -143,64 +278,170 @@
                 ForgeRock, Ping Identity, CyberArk, Okta, and Azure AD, offering tailored solutions for seamless access,
                 robust security, and regulatory compliance. With a focus on innovation and customer satisfaction, Sechay
                 Services ensures your business stays secure and future-ready.</p>
-            <button class="explore-btn" onclick="scrollToServices()">Explore Services</button>
+            <button class="explore-btn" onclick="scrollToServices()">Explore Jobs</button>
         </div>
     </div>
+
     <div class="container">
         <div class="header" id="career">
-            <h1>Join Our Team</h1>
-            <p>We are always looking for talented individuals who want to make a difference.</p>
+            <h1>The Future Awaits—Unleashed</h1>
+            <p>The future is yours to shape. Explore endless opportunities to unlock your purpose, harness your
+                potential, and create a brighter tomorrow. No matter where you are or what inspires you most, we offer
+                the perfect platform for your skills. Step forward and make your mark.</p>
         </div>
-
+       
         <div class="job-listing">
+            
             <div class="job-card">
-                <h2>Software Engineer</h2>
-                <p>Location: Remote</p>
-                <p>We are seeking a skilled software engineer to develop and maintain web applications using modern
-                    technologies.</p>
-                <a href="#" class="apply-btn">Apply Now</a>
+                <h2>Forgerock Developer</h2>
+                <p style="font-weight: bold;">Location: Hyderabad</p>
+                <p>We are seeking a skilled ForgeRock Developer to design, develop, and maintain identity and access
+                    management solutions using modern technologies.</p>
+                <a class="read-more-btn" onclick="openModal('job1')">Read More</a>
             </div>
+           
+            <div id="job1" class="modal" onclick="closeModal(event)">
+                <div class="modal-content" onclick="event.stopPropagation()">
+                    <span class="close-btn" onclick="closeModal()">×</span>
+                    <h3>ForgeRock Developer - Full Details</h3>
+                    <h6>Location : Hyderabad</h6>
+                    <p><strong>Responsibilities:</strong></p>
+                    <ul>
+                        <li>Working on enhancements in Access Management use cases as per stories in current Sprint.
+                        </li>
+                        <li>Execution of Unit Testing and getting Code Review done.</li>
+                        <li>Check in of code into distributed configuration management system (ex: GIT).</li>
+                        <li>Escalating any technical issues or blockers with the Project Lead for resolution.</li>
+                        <li>Getting necessary clarifications with respect to any of in progress stories during the
+                            stand up calls.</li>
+                        <li>Co-ordinating with the deployment team for deployment of code into higher environments.
+                        </li>
+                        <li>Co-ordinating with the QA team for execution of System Testing.</li>
+                    </ul>
+                    <p><strong>Requirements:</strong></p>
+                    <ul>
+                        <li>Working knowledge of configuring OpenAM for Authentication, Authorization, SSO and MFA.
+                        </li>
+                        <li>Working knowledge of Linux Shell Scripting.</li>
+                        <li>Hands on in usage of Agile Storyboards.</li>
+                        <li>Good written and spoken communication skills.</li>
+                    </ul>
+                    <a href="#" class="apply-btn">Apply Now</a>
+                </div>
+            </div>      
             <div class="job-card">
-                <h2>Software Engineer</h2>
-                <p>Location: Remote</p>
-                <p>We are seeking a skilled software engineer to develop and maintain web applications using modern
-                    technologies.</p>
-                <a href="#" class="apply-btn">Apply Now</a>
+                <h2>IAM Tester</h2>
+                <p style="font-weight: bold;">Location: Hyderabad</p>
+                <p>We are seeking a skilled Manual Tester with at least 4 years of experience in software testing,
+                    specifically in the Identity and Access Management (IAM) domain.</p>
+                <a class="read-more-btn" onclick="openModal('job2')">Read More</a>
             </div>
-            <div class="job-card">
-                <h2>Product Manager</h2>
-                <p>Location: New York, NY</p>
-                <p>Drive product strategy and collaborate with cross-functional teams to deliver innovative solutions.
-                </p>
-                <a href="#" class="apply-btn">Apply Now</a>
+            
+            <div id="job2" class="modal" onclick="closeModal(event)">
+                <div class="modal-content" onclick="event.stopPropagation()">
+                    <span class="close-btn" onclick="closeModal()">×</span>
+                    <h3>IAM Tester - Full Details</h3>
+                    <h6>Location : Hyderabad</h6>
+                    <p><strong>Responsibilities:</strong></p>
+                    <ul>
+                        <li>Working on enhancements in Access Management use cases as per stories in current Sprint.
+                        </li>
+                        <li>Test Planning Strategy: Design and implement test strategies specific to IAM and IGA
+                            solutions.</li>
+                        <li>Develop test plans, test cases, and test scripts for IAM/IGA applications.</li>
+                        <li>Escalating any technical issues or blockers with the Project Lead for resolution.</li>
+                        <li>Getting necessary clarifications with respect to any of in progress stories during the
+                            stand up calls.</li>
+                        <li>Work closely with development and security teams to define testing requirements.
+                        </li>
+                        <li>Co-ordinating with the QA team for execution of System Testing.</li>
+                    </ul>
+                    <p><strong>Requirements:</strong></p>
+                    <ul>
+                        <li>The role requires strong expertise in designing, developing, and executing test scripts to
+                            ensure quality assurance in IAM/IGA solutions.</li>
+                        <li>The ideal candidate must have hands-on experience with practical exposure to IAM products
+                            such as SailPoint, Saviynt, or Ping, OKTA, CyberArk.
+                        </li>
+                        <li>The role requires strong expertise in designing, developing, and executing test scripts to
+                            ensure quality assurance in IAM/IGA solutions.</li>
+                        <li>Hands on in usage of Agile Storyboards.</li>
+                        <li>Good written and spoken communication skills.</li>
+                    </ul>
+                    <a href="#" class="apply-btn">Apply Now</a>
+                </div>
             </div>
 
+          
             <div class="job-card">
-                <h2>UI/UX Designer</h2>
-                <p>Location: San Francisco, CA</p>
-                <p>Create intuitive and visually appealing user experiences across web and mobile platforms.</p>
-                <a href="#" class="apply-btn">Apply Now</a>
+                <h2>Business Analyst</h2>
+                <p style="font-weight: bold;">Location: Hyderabad</p>
+                <p>We are seeking a skilled Business Analyst to analyze and document business requirements for our IAM
+                    projects.</p>
+                <a class="read-more-btn" onclick="openModal('job3')">Read More</a>
             </div>
-
-            <div class="job-card">
-                <h2>Data Scientist</h2>
-                <p>Location: Remote</p>
-                <p>Analyze large datasets to drive data-informed decisions and deliver predictive analytics solutions.
-                </p>
-                <a href="#" class="apply-btn">Apply Now</a>
+            <div id="job3" class="modal" onclick="closeModal(event)">
+                <div class="modal-content" onclick="event.stopPropagation()">
+                    <span class="close-btn" onclick="closeModal()">×</span>
+                    <h3>Business Analyst - Full Details</h3>
+                    <h6>Location : Hyderabad</h6>
+                    <p><strong>Responsibilities:</strong></p>
+                    <ul>
+                        <li>Primary role of Business Analyst-Security performing application administration and Active Directory.</li>
+                        <li>ser provisioning and De-provisioning. User life-cycle management, performing certifications, Access Reviews and terminations, etc..</li>
+                        <li>Work with stakeholders to prioritize requirements.</li>
+                        <li>Incident Response to security incidents and take appropriate action to secure user identities and access.</li>
+                    </ul>
+                    <p><strong>Requirements:</strong></p>
+                    <ul>
+                        <li>Proven experience as a Business Analyst.</li>
+                        <li>Ability to communicate well both verbally and in writing to technical and non-technical audiences of various levels within organization.</li>
+                        <li>Understanding on cloud access management.</li>
+                        <li>Must be able to multitask in a fast-paced environment with focus on timeliness, documentation, and communications with peers and business users alike.</li>
+                        <li>Graduate in any stream but need to have IT knowledge.</li>
+                    </ul>
+                    <a href="#" class="apply-btn">Apply Now</a>
+                </div>
             </div>
-        </div>
-
-        <div class="cta">
-            <h2>Don't see a position for you?</h2>
-            <p>We'd still love to hear from you. Send us your resume and tell us why you'd be a great fit!</p>
-            <a href="#" class="apply-btn">Submit Your Resume</a>
         </div>
     </div>
+    <div id="footer-container"></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
     <script>
-         function scrollToServices() {
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'flex';
+        }
+
+        function closeModal(event) {
+            if (event) {
+                event.stopPropagation();
+            }
+            var modals = document.querySelectorAll('.modal');
+            modals.forEach(function (modal) {
+                modal.style.display = 'none';
+            });
+        }
+
+        function scrollToServices() {
             document.getElementById('career').scrollIntoView({ behavior: 'smooth' });
         }
+        window.onclick = function (event) {
+            if (event.target.className === 'modal') {
+                closeModal();
+            }
+        };
+        function loadHTML(id, file) {
+            fetch(file)
+                .then(response => response.text())
+                .then(data => document.getElementById(id).innerHTML = data)
+                .catch(error => console.error(`Error loading ${file}:`, error));
+        }
+
+        loadHTML('navbar-container', 'nav.html');
+        loadHTML('footer-container', 'footer.html');
     </script>
 </body>
 
