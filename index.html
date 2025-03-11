@@ -30,7 +30,7 @@
         <button class="btn btn-custom me-2 position-relative z-1">Explore Our Services →</button>
         <button class="btn btn-custom-light position-relative z-1">Contact Us →</button>
     </div>
-    <div class="container px-4 py-5" id="featured-3">
+    <div class="container px-4 py-5" id="featured-3" style="margin-top: 190px;">
         <h2 class="pb-2 text-center border-bottom">Empowering You to Secure What Matters Most.</h2>
         <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
             <div class="col">
@@ -58,8 +58,7 @@
                     <div class="card-body">
                         <img src="Images/project-management.png" alt="Feature 3" width="100" height="100" class="mb-3">
                         <h3 class="fs-4 text-body-emphasis">Pioneering</h3>
-                        <p class="card-text">Focus on refining expertise, integrating advanced insights, and applying
-                            adaptive strategies to mitigate emerging security challenges.</p>
+                        <p class="card-text">Refine expertise, integrate advanced insights, and apply adaptive strategies to address emerging security challenges.</p>
                     </div>
                 </div>
             </div>
@@ -415,17 +414,7 @@
     <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
         integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"
         async></script>
-    <script>
-        function loadHTML(id, file) {
-            fetch(file)
-                .then(response => response.text())
-                .then(data => document.getElementById(id).innerHTML = data)
-                .catch(error => console.error(`Error loading ${file}:`, error));
-        }
-
-        loadHTML('navbar-container', 'nav.html');
-        loadHTML('footer-container', 'footer.html')
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
