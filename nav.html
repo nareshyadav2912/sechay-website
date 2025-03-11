@@ -22,7 +22,7 @@
 
         .navbar-brand {
             font-family: 'Caveat', cursive;
-            font-size: 42px;
+            font-size: 42px !important; 
             color: #073e79 !important;
         }
 
@@ -56,8 +56,8 @@
         }
 
         .navbar {
-            background-color: white;
-            position: fixed;
+            background-color: rgb(231,234,235) !important; 
+            position: fixed !important;
             top: 0;
             width: 100%;
             z-index: 1000;
@@ -129,6 +129,21 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class="bi bi-tools"></i> Services
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="">
+                                    <i class="bi bi-link-45deg"></i> Business Consulting</a></li>
+                                <li><a class="dropdown-item" href="">
+                                    <i class="bi bi-shield-lock"></i> Design and Integration</a></li>
+                                <li><a class="dropdown-item" href="">
+                                    <i class="bi bi-lock"></i> System administration and maintenance</a></li>
+                                <li><a class="dropdown-item" href="">
+                                    <i class="bi bi-cloud"></i> Managed Support Services</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-tools"></i> Solutions
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="services.html#ping">
