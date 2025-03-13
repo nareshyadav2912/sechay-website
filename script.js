@@ -16,3 +16,31 @@ function loadHTML(id, file) {
 
 loadHTML('navbar-container', 'nav.html');
 loadHTML('footer-container', 'footer.html')
+function sendMail(event) {
+    event.preventDefault(); 
+
+  
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let contact = document.getElementById("contact").value;
+    let company = document.getElementById("company").value;
+    let comment = document.getElementById("comment").value;
+
+    
+    let emailBody = `Name: ${name}%0AEmail: ${email}%0ACompany: ${company}%0AContact: ${contact}%0A%0AComment:%0A${comment}`;
+
+   
+    let mailtoLink = `mailto:avulaanand59@gmail.com?subject=New Contact Form Submission&body=${emailBody}`;
+    window.location.href = mailtoLink;
+
+ 
+    document.getElementById("contactForm").reset();
+
+    
+    document.getElementById("successMessage").style.display = "block";
+
+   
+    setTimeout(() => {
+        document.getElementById("successMessage").style.display = "none";
+    }, 5000); 
+}
