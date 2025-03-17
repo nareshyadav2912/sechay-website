@@ -13,35 +13,55 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-        <div class="container">
-            <a class="navbar-brand fw-bold" style="color: #0f7ed3;" href="#">SECHAY</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown">Services</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">IAM Solutions</a></li>
-                            <li><a class="dropdown-item" href="#">Cybersecurity</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Case Studies</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
-                </ul>
-                <button class="btn btn-dark ms-3">Contact Us</button>
-            </div>
-        </div>
-    </nav>
-    <div class="hero-section">
-        <div class="floating-icons">
+    <div id="navbar-container"></div>
+    <div class="hero-section position-relative">
+        <div class="floating-icons position-relative z-1">
             <i class="fas fa-lock icon1"></i>
             <i class="fas fa-shield-alt icon2"></i>
             <i class="fas fa-user-shield icon3"></i>
+        </div>
+        <h1 class="hero-title position-relative z-1">Expert Identity Security Solutions from the Premier Identity and
+            Access Management Provider.</h1>
+        <p class="hero-subtitle position-relative z-1">We are a premier provider of identity-centric cybersecurity
+            solutions, earning the trust of organizations around the world. With a dedicated team of cybersecurity
+            experts, Our expertise lies in creating forward-thinking, personalized solutions that align with the unique
+            needs of every client.</p>
+        <button class="btn btn-custom me-2 position-relative z-1">Explore Our Services →</button>
+        <button class="btn btn-custom-light position-relative z-1">Contact Us →</button>
+    </div>
+    <div class="container px-4 py-5" id="featured-3" style="margin-top: 190px;">
+        <h2 class="pb-2 text-center border-bottom">Empowering You to Secure What Matters Most.</h2>
+        <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+            <div class="col">
+                <div class="card text-center overflow-hidden rounded-4 shadow-lg animated-card">
+                    <div class="card-body">
+                        <img src="Images/team-leader.png" alt="Feature 1" width="100" height="100" class="mb-3">
+                        <h3 class="fs-4 text-body-emphasis">Global Leadership</h3>
+                        <p class="card-text">Global leadership in security solutions means leading innovation, setting
+                            standards, and delivering reliable security worldwide.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card text-center overflow-hidden rounded-4 shadow-lg animated-card">
+                    <div class="card-body">
+                        <img src="Images/trust.png" alt="Feature 2" width="100" height="100" class="mb-3">
+                        <h3 class="fs-4 text-body-emphasis">Integrity and Trust</h3>
+                        <p class="card-text">Integrity and trust ensure ethical conduct, transparency, and
+                            accountability in all security operations and interactions.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card text-center overflow-hidden rounded-4 shadow-lg animated-card">
+                    <div class="card-body">
+                        <img src="Images/project-management.png" alt="Feature 3" width="100" height="100" class="mb-3">
+                        <h3 class="fs-4 text-body-emphasis">Pioneering</h3>
+                        <p class="card-text">Refine expertise, integrate advanced insights, and apply adaptive
+                            strategies to address emerging security challenges.</p>
+                    </div>
+                </div>
+            </div>
         </div>
         <span class="badge bg-light text-dark py-5 px-2 mb-0">IDENTITY & ACCESS MANAGEMENT</span>
         <h1 class="hero-title">Secure Identity Solutions for the Digital Enterprise</h1>
@@ -49,30 +69,119 @@
         <button class="btn btn-custom me-2">Explore Our Services →</button>
         <button class="btn btn-custom-light">Contact Us →</button>
     </div>
+    <div class="container py-5">
+
+        <div class="row align-items-center mb-5">
+            <div class="col-lg-12">
+                <div class="box d-flex flex-column flex-lg-row ">
+                    <div class="content p-4">
+                        <h2>IAM Strategy Consulting</h2>
+                        <p>
+                            With deep expertise in Identity and Access Management (IAM), we offer tailored IAM Strategy
+                            Consulting services to help organizations design and optimize their IAM strategies. We
+                            assess your current systems, identify gaps, and create solutions that enhance security,
+                            streamline access control, and align with your business goals.
+                        </p>
+                        <a href="services.html" class="read-more">Read more</a>
+                    </div>
+                    <div class="image">
+                        <img src="Images/Premium Vector _ Private Key.jpg" alt="IAM Strategy Consulting"
+                            class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row align-items-center mb-5">
+            <div class="col-lg-12">
+                <div class="box d-flex flex-column flex-lg-row-reverse">
+                    <div class="content p-4">
+                        <h2>IAM Platform Design and Integration</h2>
+                        <p>
+                            Together with us, your IAM vision becomes a reality. Our experienced team designs, deploys,
+                            and integrates solutions that are fully aligned with your business needs, ensuring a secure,
+                            efficient, and future-proof IAM infrastructure.
+                        </p>
+                        <a href="#" class="read-more">Read more</a>
+                    </div>
+                    <div class="image">
+                        <img src="Images/Master JSON for Web Development.jpg" alt="Access Governance" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row align-items-center mb-5">
+            <div class="col-lg-12">
+                <div class="box d-flex flex-column flex-lg-row">
+                    <div class="content p-4">
+                        <h2>IAM System Administration and Maintenance</h2>
+                        <p>
+                            Secure your IAM infrastructure with our specialized support services. We offer automated
+                            system monitoring, an efficient ticketing platform, customizable support models, and 24/7
+                            remote assistance from key international locations to ensure optimal performance.
+                        </p>
+                        <a href="#" class="read-more">Read more</a>
+                    </div>
+                    <div class="image">
+                        <img src="Images/Premium Vector _ Private Key.jpg" alt="Identity Lifecycle Management"
+                            class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row align-items-center mb-5">
+            <div class="col-lg-12">
+                <div class="box d-flex flex-column flex-lg-row-reverse">
+                    <div class="content p-4">
+                        <h2>IAM Outsourcing Services</h2>
+                        <p>
+                            Boost your IAM management with our customized Managed Services. We provide end-to-end
+                            solutions, from strategic advisory to ongoing support, ensuring your IAM infrastructure
+                            scales with your business. A dedicated service delivery manager is always available to guide
+                            you.
+                        </p>
+                        <a href="#" class="read-more">Read more</a>
+                    </div>
+                    <div class="image">
+                        <img src="Images/download.jpg" alt="Privileged Access Management" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="container px-4 py-5" id="custom-cards">
         <h2 id="Services" class="pb-2 border-bottom">Services</h2>
-    
-        <!-- Responsive Card Row -->
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 py-5">
-            <!-- Service Card (Reusable Structure for All Services) -->
+
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 py-4">
+
             <div class="col">
-                <div class="card h-100 overflow-hidden rounded-4 shadow-lg service-card"
+                <div class="card h-100 overflow-hidden rounded-4 shadow-lg service-card animated-card"
                     style="background-color: white; transition: transform 0.3s ease, box-shadow 0.3s ease;">
                     <div class="d-flex flex-column h-100 p-4 text-black">
-                        <!-- Icon and Heading -->
+
                         <div class="d-flex align-items-center mb-3">
                             <div class="icon-container me-3" style="font-size: 3rem; color: #007bff;">
                                 <i class="fas fa-lock"></i>
                             </div>
                             <h4 class="fw-bold">ForgeRock Identity Platform</h4>
                         </div>
-    
-                        <!-- Animated List -->
+
+
                         <ul class="list-unstyled service-points mt-3">
                             <li><i class="fas fa-check-circle text-primary me-2"></i> Access Management</li>
                             <li><i class="fas fa-check-circle text-primary me-2"></i> Identity Management</li>
                             <li><i class="fas fa-check-circle text-primary me-2"></i> Identity Gateway</li>
                             <li><i class="fas fa-check-circle text-primary me-2"></i> Directory Services</li>
+                            <a href="services.html#iam" class="read-more"
+                                style="margin-top:50px;font-weight: bold;text-decoration: underline;color: black;">Read
+                                more</a>
                         </ul>
                     </div>
                 </div>
@@ -80,7 +189,7 @@
     
             <!-- CyberArk Card -->
             <div class="col">
-                <div class="card h-100 overflow-hidden rounded-4 shadow-lg service-card"
+                <div class="card h-100 overflow-hidden rounded-4 shadow-lg service-card animated-card"
                     style="background-color: white; transition: transform 0.3s ease, box-shadow 0.3s ease;">
                     <div class="d-flex flex-column h-100 p-4 text-black">
                         <div class="d-flex align-items-center mb-3">
@@ -89,20 +198,22 @@
                             </div>
                             <h4 class="fw-bold">CyberArk</h4>
                         </div>
-    
                         <ul class="list-unstyled service-points mt-3">
                             <li><i class="fas fa-check-circle text-primary me-2"></i> Privileged Access Management</li>
                             <li><i class="fas fa-check-circle text-primary me-2"></i> Endpoint Privilege Security</li>
                             <li><i class="fas fa-check-circle text-primary me-2"></i> Identity Security</li>
                             <li><i class="fas fa-check-circle text-primary me-2"></i> Threat Detection</li>
+                            <a href="services.html#cyberark" class="read-more"
+                                style="margin-top:50px;font-weight: bold;text-decoration: underline;color: black;">Read
+                                more</a>
                         </ul>
                     </div>
                 </div>
             </div>
-    
-            <!-- Okta Card -->
+
+
             <div class="col">
-                <div class="card h-100 overflow-hidden rounded-4 shadow-lg service-card"
+                <div class="card h-100 overflow-hidden rounded-4 shadow-lg service-card animated-card"
                     style="background-color: white; transition: transform 0.3s ease, box-shadow 0.3s ease;">
                     <div class="d-flex flex-column h-100 p-4 text-black">
                         <div class="d-flex align-items-center mb-3">
@@ -111,73 +222,68 @@
                             </div>
                             <h4 class="fw-bold">Okta</h4>
                         </div>
-    
+
                         <ul class="list-unstyled service-points mt-3">
                             <li><i class="fas fa-check-circle text-primary me-2"></i> Single Sign-On (SSO)</li>
                             <li><i class="fas fa-check-circle text-primary me-2"></i> Multi-Factor Authentication</li>
                             <li><i class="fas fa-check-circle text-primary me-2"></i> Lifecycle Management</li>
                             <li><i class="fas fa-check-circle text-primary me-2"></i> API Access Management</li>
+                            <a href="services.html#okta" class="read-more"
+                                style="margin-top:50px;font-weight: bold;text-decoration: underline;color: black;">Read
+                                more</a>
                         </ul>
                     </div>
                 </div>
             </div>
     
-            <!-- Azure AD Card -->
+            <!-- Okta Card -->
             <div class="col">
-                <div class="card h-100 overflow-hidden rounded-4 shadow-lg service-card"
+                <div class="card h-100 overflow-hidden rounded-4 shadow-lg service-card animated-card"
+                    style="background-color: white; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <div class="d-flex flex-column h-100 p-4 text-black">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="icon-container me-3" style="font-size: 3rem; color: #0d6efd;">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h4 class="fw-bold">Ping Identity</h4>
+                        </div>
+                        <ul class="list-unstyled service-points mt-3">
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> Automation</li>
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> Access Control</li>
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> Dynamic Security</li>
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> Integration & Risk Detection</li>
+                            <a href="services.html#ping" class="read-more"
+                                style="margin-top:50px;font-weight: bold;text-decoration: underline;color: black;">Read
+                                more</a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 overflow-hidden rounded-4 shadow-lg service-card animated-card"
                     style="background-color: white; transition: transform 0.3s ease, box-shadow 0.3s ease;">
                     <div class="d-flex flex-column h-100 p-4 text-black">
                         <div class="d-flex align-items-center mb-3">
                             <div class="icon-container me-3" style="font-size: 3rem; color: #0078d4;">
                                 <i class="fab fa-microsoft"></i>
                             </div>
-    
+
                             <h4 class="fw-bold">Azure AD</h4>
                         </div>
-    
+
                         <ul class="list-unstyled service-points mt-3">
                             <li><i class="fas fa-check-circle text-primary me-2"></i> Identity Governance</li>
                             <li><i class="fas fa-check-circle text-primary me-2"></i> Azure AD B2C</li>
                             <li><i class="fas fa-check-circle text-primary me-2"></i> Hybrid Identity</li>
                             <li><i class="fas fa-check-circle text-primary me-2"></i> Conditional Access</li>
+                            <a href="services.html#azure" class="read-more"
+                                style="margin-top:50px;font-weight: bold;text-decoration: underline;color: black;">Read
+                                more</a>
                         </ul>
                     </div>
                 </div>
             </div>
-    
-        </div>
-    </div>
-    
-    <div class="background-container">
-        <div class="container mt-5">
-            <h2 class="snapshot-title">Sechay Snapshot</h2>
-            <div class="row text-center">
-                <div class="col-md-3 col-6">
-                    <div class="snapshot-box">
-                        <div class="snapshot-number">40+</div>
-                        <p class="snapshot-text">years of experience in offering industry tailored solutions</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-6">
-                    <div class="snapshot-box">
-                        <div class="snapshot-number">90+</div>
-                        <p class="snapshot-text">global talent pool of expert consultants and advisors</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-6">
-                    <div class="snapshot-box">
-                        <div class="snapshot-number">10+</div>
-                        <p class="snapshot-text">Home to Oracle consultants with an average of years of technical
-                            experience</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-6">
-                    <div class="snapshot-box">
-                        <div class="snapshot-number">12+</div>
-                        <p class="snapshot-text">years of extensive experience in offering technical services</p>
-                    </div>
-                </div>
-            </div>
+
         </div>
     </div>
     <div class="reasons-section">
@@ -223,127 +329,8 @@
             </div>
         </div>
     </div>
-    <div class="row mx-lg-auto" data-masonry="{&quot;percentPosition&quot;: true }"
-        style="position: relative; height: 1851.8px;">
-        <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 0%; top: 0px;">
-            <div class="card" style="transition: transform 0.3s ease, box-shadow 0.3s ease;"
-                onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.5)';"
-                onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.3)'; ">
-                <svg class="bd-placeholder-img card-img-top" width="100%" height="200"
-                    xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap"
-                    preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <title>Placeholder</title>
-                    <rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6"
-                        dy=".3em">Image cap</text>
-                </svg>
-                <div class="card-body">
-                    <h5 class="card-title">Card title that wraps to a new line</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                        additional content. This content is a little bit longer.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 0%; top: 361.6px;">
-            <div class="card p-3" style="transition: transform 0.3s ease, box-shadow 0.3s ease;"
-                onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.5)';"
-                onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.3)';">
-                <figure class="p-3 mb-0">
-                    <blockquote class="blockquote">
-                        <p>A well-known quote, contained in a blockquote element.</p>
-                    </blockquote>
-                    <figcaption class="blockquote-footer mb-0 text-body-secondary">
-                        Someone famous in <cite title="Source Title">Source Title</cite>
-                    </figcaption>
-                </figure>
-            </div>
-        </div>
-        <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 0%; top: 532.2px;">
-            <div class="card" style="transition: transform 0.3s ease, box-shadow 0.3s ease;"
-                onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.5)';"
-                onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.3)';">
-                <svg class="bd-placeholder-img card-img-top" width="100%" height="200"
-                    xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap"
-                    preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <title>Placeholder</title>
-                    <rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6"
-                        dy=".3em">Image cap</text>
-                </svg>
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.
-                    </p>
-                    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 0%; top: 909.8px;">
-            <div class="card text-bg-primary text-center p-3"
-                style="transition: transform 0.3s ease, box-shadow 0.3s ease;"
-                onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.5)';"
-                onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.3)';">
-                <figure class="mb-0">
-                    <blockquote class="blockquote">
-                        <p>A well-known quote, contained in a blockquote element.</p>
-                    </blockquote>
-                    <figcaption class="blockquote-footer mb-0 text-white">
-                        Someone famous in <cite title="Source Title">Source Title</cite>
-                    </figcaption>
-                </figure>
-            </div>
-        </div>
-        <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 0%; top: 1048.4px;">
-            <div class="card text-center" style="transition: transform 0.3s ease, box-shadow 0.3s ease;"
-                onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.5)';"
-                onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.3)';">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This card has a regular title and short paragraph of text below it.</p>
-                    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 0%; top: 1226px;">
-            <div class="card" style="transition: transform 0.3s ease, box-shadow 0.3s ease;"
-                onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.5)';"
-                onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.3)';">
-                <svg class="bd-placeholder-img card-img" width="100%" height="260" xmlns="http://www.w3.org/2000/svg"
-                    role="img" aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice"
-                    focusable="false">
-                    <title>Placeholder</title>
-                    <rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6"
-                        dy=".3em">Card image</text>
-                </svg>
-            </div>
-        </div>
-        <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 0%; top: 1511.6px;">
-            <div class="card p-3 text-end" style="transition: transform 0.3s ease, box-shadow 0.3s ease;"
-                onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.5)';"
-                onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.3)';">
-                <figure class="mb-0">
-                    <blockquote class="blockquote">
-                        <p>A well-known quote, contained in a blockquote element.</p>
-                    </blockquote>
-                    <figcaption class="blockquote-footer mb-0 text-body-secondary">
-                        Someone famous in <cite title="Source Title">Source Title</cite>
-                    </figcaption>
-                </figure>
-            </div>
-        </div>
-        <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 0%; top: 1650.2px;">
-            <div class="card" style="transition: transform 0.3s ease, box-shadow 0.3s ease;"
-                onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.5)';"
-                onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.3)';">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is another card with title and supporting text below. This card has some
-                        additional content to make it slightly taller overall.</p>
-                    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-                </div>
-            </div>
-        </div>
-    </div>
     <div class="container px-4 py-5">
-        <h2 class="pb-2 border-bottom">Join Sechay LLC</h2>
+        <h2 class="pb-2 border-bottom">Engage with US!</h2>
 
         <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5">
             <div class="col d-flex flex-column align-items-start gap-2">
@@ -352,7 +339,7 @@
                     celebrate success. We encourage life-long career development, offer competitive salary, overall
                     compensation and benefits, and greatly value our employees. We are continuously looking to acquire
                     the brightest and most talented in the industry and give them career defining challenges!.</p>
-                <a href="#" class="btn btn-primary btn-lg">Join Us!</a>
+                <a href="Carrer.html" class="btn btn-primary btn-lg">Join Us!</a>
             </div>
 
             <div class="col">
@@ -396,11 +383,11 @@
             </div>
         </div>
     </div>
-    <div class="work-with-us">
+    <div id="contact" class="work-with-us">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <h2>Work with Us:</h2>
+                    <h2>Contact Us</h2>
                     <p>Put identity security at the core of securing your business. Contact us today and we will put you
                         in touch with one of our IAM experts to discuss how you can take full advantage of our flexible
                         security solutions.</p>
@@ -436,19 +423,8 @@
         </div>
     </div>
 
-    <div class="container">
-        <footer class="py-3 my-4">
-            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Services</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Solutions</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Contact</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Careers</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
-            </ul>
-            <p class="text-center text-body-secondary">© 2024 Sechay LLC - ALL RIGHTS RESERVED</p>
-        </footer>
-    </div>
+    <div id="footer-container"></div>
+    <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>

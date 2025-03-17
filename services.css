@@ -1,0 +1,176 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    color: #333;
+   
+}
+.hero-section {
+    min-height: 100vh;
+    background: url(Images/What\ Do\ You\ Understand\ By\ Virtual\ Private\ Network\ \(VPN\)_.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    text-align: left;
+    padding: 20px; 
+}
+
+.hero-content {
+    max-width: 80%; 
+}
+
+.hero-content h1 {
+    max-width: 600px;
+    margin-left: 20px;
+    font-weight: bold;
+    color: rgb(255, 253, 253);
+    font-size: 3rem; 
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    margin-left: 20px;
+    max-width: 570px; 
+    text-align: left;
+    color: white;
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.explore-btn {
+    margin-left: 110px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.2rem;
+    color: #4e54c8;
+    background: white;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+@media (max-width: 768px) {
+    .hero-section {
+        justify-content: center; 
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem; 
+        margin-left: 0;
+    }
+
+    .hero-content p {
+        margin-left: 0;
+        font-size: 1rem; 
+    }
+
+    .explore-btn {
+        margin-left: 0; 
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 1.75rem; 
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+
+    .explore-btn {
+        font-size: 1rem; 
+    }
+}
+
+ 
+.explore-btn:hover {
+    background: #f0f0f0;
+}
+ 
+
+.service-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 2rem;
+}
+ 
+.service-list {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+ 
+.service-list button {
+    font-size: larger;
+    padding: 1rem;
+    border: none;
+    background: linear-gradient(135deg, #4e54c8, #8f94fb);
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+ 
+.service-list button:hover {
+    transform: scale(1.05);
+}
+ 
+.service-content {
+    display: none;
+    max-width: fit-content;
+    text-align: center;
+}
+ 
+.service-content p {
+    font-size: larger;
+}
+ 
+.service-content.active {
+    display: block;
+}
+ 
+.service-content img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+}
+ 
+
+.list-item {
+    border-radius: 20px;
+    display: inline;
+    font-size: larger;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: slideIn 0.5s ease-out forwards;
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.list-item:nth-child(1) { animation-delay: 0.2s; }
+.list-item:nth-child(2) { animation-delay: 0.4s; }
+.list-item:nth-child(3) { animation-delay: 0.6s; }
+.list-item:nth-child(4) { animation-delay: 0.8s; }
+.list-item:nth-child(5) { animation-delay: 1s; }
+.list-item:nth-child(6) { animation-delay: 1.2s; }
+.list-item:nth-child(7) { animation-delay: 1.4s; } 
+@media (max-width: 992px) {
+    .service-list {
+        flex-direction: column;
+    }
+}
