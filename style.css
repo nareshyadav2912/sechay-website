@@ -3,36 +3,23 @@
     padding: 50px 0;
 }
 body {
-<<<<<<< HEAD
-    background: linear-gradient(to bottom, #f8fbff, #e9eff5);
-    font-family: Arial, sans-serif;
-}
-.hero-section {
-=======
     background: linear-gradient(to bottom, #040405, #181819);
     font-family: Arial, sans-serif;
 }
 .hero-section {
     margin-top: 100px;
->>>>>>> 86ae3313b89d17989333ec09b27922a60595426e
     text-align: center;
     padding: 80px 20px;
     position: relative;
 }
 .hero-title {
-<<<<<<< HEAD
-=======
     
->>>>>>> 86ae3313b89d17989333ec09b27922a60595426e
     font-size: 2.5rem;
     font-weight: bold;
     color: #0c1b33;
 }
 .hero-subtitle {
-<<<<<<< HEAD
-=======
     
->>>>>>> 86ae3313b89d17989333ec09b27922a60595426e
     font-size: 1.1rem;
     color: #606b85;
     margin-bottom: 20px;
@@ -50,10 +37,6 @@ body {
     border: 1px solid #0c1b33;
     border-radius: 5px;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 86ae3313b89d17989333ec09b27922a60595426e
 .floating-icons {
     position: absolute;
     width: 100%;
