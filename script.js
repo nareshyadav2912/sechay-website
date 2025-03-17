@@ -44,3 +44,35 @@ function sendMail(event) {
         document.getElementById("successMessage").style.display = "none";
     }, 5000); 
 }
+
+function openModal(modalId) {
+    document.getElementById(modalId).style.display = 'flex';
+}
+
+function closeModal(event) {
+    if (event) {
+        event.stopPropagation();
+    }
+    var modals = document.querySelectorAll('.modal');
+    modals.forEach(function (modal) {
+        modal.style.display = 'none';
+    });
+}
+
+function scrollToServices() {
+    document.getElementById('career').scrollIntoView({ behavior: 'smooth' });
+}
+window.onclick = function (event) {
+    if (event.target.className === 'modal') {
+        closeModal();
+    }
+};
+function loadHTML(id, file) {
+    fetch(file)
+        .then(response => response.text())
+        .then(data => document.getElementById(id).innerHTML = data)
+        .catch(error => console.error(`Error loading ${file}:`, error));
+}
+
+loadHTML('navbar-container', 'nav.html');
+loadHTML('footer-container', 'footer.html');
