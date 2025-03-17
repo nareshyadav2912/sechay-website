@@ -37,7 +37,6 @@ body {
     border: 1px solid #0c1b33;
     border-radius: 5px;
 }
-
 .floating-icons {
     position: absolute;
     width: 100%;
@@ -293,3 +292,46 @@ p {
         margin-top: 20px;
     }
 }
+.work-with-us {
+    font-size: larger;
+    background: linear-gradient(90deg, #ffffff, #ffffff);
+    color: rgb(8, 8, 8);
+    padding: 50px 20px;
+}
+.form-control {
+    font-size: medium;
+    background-color: white;
+    color: #333;
+}
+.submit-btn {
+    background-color: rgb(5, 4, 4);
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.submit-btn:hover {
+    background-color: rgb(35, 138, 255);
+}
+.service-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.service-points li {
+    opacity: 2;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.service-card:hover .service-points li {
+    opacity: 1;
+    transform: translateY(0);
+}
+.service-points li:nth-child(1) { transition-delay: 0.1s; }
+.service-points li:nth-child(2) { transition-delay: 0.2s; }
+.service-points li:nth-child(3) { transition-delay: 0.3s; }
+.service-points li:nth-child(4) { transition-delay: 0.4s; }
