@@ -1,0 +1,292 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container mt-5">
+        <h2 class="text-center">Contact Us</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form id="contactForm" onsubmit="sendMail(event)">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Send Email</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function sendMail(event) {
+            event.preventDefault(); 
+            
+
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let message = document.getElementById("message").value;
+
+        
+            let emailBody = `Name: ${name}%0AEmail: ${email}%0A%0AMessage:%0A${message}`;
+
+          
+            let mailtoLink = `mailto:avulaanand59@gmail.com?subject=New Contact Form Submission&body=${emailBody}`;
+            window.location.href = mailtoLink;
+        }
+    </script>
+
+</body>
+</html>
+ -->
+
+
+
+ <!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .card-img-top {
+            height: 200px;
+            width: 100%;
+            width: min-content;
+            object-fit: contain;
+        }
+ 
+        .explore-btn {
+            margin-left: 10px;
+            padding: 0.75rem 1.5rem;
+            font-size: 1.2rem;
+            color: #4e54c8;
+            background: white;
+            border: none;
+            border-radius: 40px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+ 
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2rem;
+                margin-top: 130px;
+            }
+ 
+            .hero-description {
+                font-size: 1rem;
+                padding: 0 20px;
+            }
+ 
+            .explore-btn {
+                margin-bottom: 20px;
+            }
+        }
+ 
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 1.5rem;
+            }
+ 
+            .hero-description {
+                font-size: 0.9rem;
+                padding: 0 10px;
+            }
+ 
+            .explore-btn {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+ 
+<body>
+    <!-- <div id="navbar-container"></div> -->
+    <section class="text-white text-center d-flex align-items-center justify-content-center hero-section"
+        style="min-height: 100vh; background: url(Images/blogback.png) no-repeat center center/cover;">
+        <div class="container">
+            <h1 class="display-4 fw-bold hero-title">Unlock the Future of Identity & Access Management.</h1>
+            <p class="lead hero-description">Identity and Access Management (IAM) is a security framework that controls
+                and manages user identities and access to systems, applications, and data. It includes key processes
+                like authentication, authorization, user provisioning, and access governance. IAM ensures secure access,
+                enhances compliance, and protects sensitive information across on-premise and cloud environments.</p>
+            <button class="explore-btn btn btn-light btn-lg mt-3" onclick="scrollToBlogs()">Read Blogs</button>
+        </div>
+    </section>
+    <div class="container mt-4" id="blogs">
+        <div class="dropdown mb-4">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="blogCategory" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Filter by Category
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="blogCategory">
+                <li><a class="dropdown-item" href="#" onclick="filterBlogs('all', event)">All</a></li>
+                <li><a class="dropdown-item" href="#" onclick="filterBlogs('forgerock', event)">ForgeRock</a></li>
+                <li><a class="dropdown-item" href="#" onclick="filterBlogs('ping', event)">Ping</a></li>
+                <li><a class="dropdown-item" href="#" onclick="filterBlogs('cyberark', event)">CyberArk</a></li>
+                <li><a class="dropdown-item" href="#" onclick="filterBlogs('okta', event)">Okta</a></li>
+                <li><a class="dropdown-item" href="#" onclick="filterBlogs('azuread', event)">Azure AD</a></li>
+                <li><a class="dropdown-item" href="#" onclick="filterBlogs('sailpoint', event)">SailPoint</a></li>
+ 
+            </ul>
+        </div>
+ 
+        <div id="blogContainer" class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col" data-category="forgerock">
+                <div class="card h-100">
+                    <img src="https://www.vectorlogo.zone/logos/forgerock/forgerock-ar21.svg" class="card-img-top"
+                        alt="ForgeRock">
+                    <div class="card-body">
+                        <h5 class="card-title">Top 5 Use Cases of ForgeRock in Digital Transformation</h5>
+                        <p class="card-text">Digital transformation has reshaped how businesses operate, and identity
+                            management plays a pivotal role in this journey. ForgeRock stands out as a leader in IAM
+                            solutions, offering various use cases that cater to modern business needs.</p>
+                        <button class="btn btn-primary" onclick="toggleDetails('d1',this)">Read More</button>
+                        <p id="d1" class="card-text d-none">
+                            <strong>1. Customer Identity and Access Management (CIAM):</strong> ForgeRock enhances
+                            customer onboarding with self-registration, social login, and profile management. These
+                            features improve user experience while ensuring secure access and seamless service
+                            delivery.<br><br>
+                            <strong>2. Single Sign-On (SSO):</strong> ForgeRock enables users to access multiple
+                            applications with a single set of credentials. This reduces password fatigue, improves user
+                            productivity, and strengthens security across platforms.<br><br>
+                            <strong>3. Multi-Factor Authentication (MFA):</strong> With support for biometrics, mobile
+                            push notifications, and hardware tokens, ForgeRock provides robust MFA solutions. This adds
+                            an extra layer of security by requiring multiple verification factors for user
+                            authentication.<br><br>
+                            <strong>4. IoT Identity Management:</strong> ForgeRock ensures secure identity management
+                            for IoT devices, allowing businesses to control and authorize device access. This protects
+                            sensitive resources and supports large-scale IoT deployments.<br><br>
+                            <strong>5. Privacy and Compliance:</strong> ForgeRock aids in regulatory compliance with
+                            tools for consent management and data transparency. It supports organizations in meeting
+                            privacy standards like GDPR while empowering users with greater control over their personal
+                            data.
+                        </p>
+                    </div>
+                </div>
+            </div>
+ 
+            <div class="col" data-category="ping">
+                <div class="card h-100">
+                    <img src="https://images.seeklogo.com/logo-png/33/1/ping-identity-logo-png_seeklogo-336508.png"
+                        class="card-img-top" alt="Ping">
+                    <div class="card-body">
+                        <h5 class="card-title">Ping Identity Overview</h5>
+                        <p class="card-text">Discover how Ping provides secure and scalable identity solutions.</p>
+                        <button class="btn btn-primary" onclick="toggleDetails('d2',this)">Read More</button>
+                        <p id="d2" class="card-text d-none">
+                            <li></li>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col" data-category="cyberark">
+                <div class="card h-100">
+                    <img src="https://www.cyberark.com/wp-content/uploads/2021/06/CyberArk-Logo-Horizontal-Blue.svg"
+                        class="card-img-top" alt="CyberArk">
+                    <div class="card-body">
+                        <h5 class="card-title">CyberArk Privileged Access Management</h5>
+                        <p class="card-text">Understand CyberArk's approach to privileged access security.</p>
+                        <button class="btn btn-primary" onclick="toggleDetails('d3',this)">Read More</button>
+                        <p id="d3" class="card-text d-none">Get insights into CyberArk's leading solutions for
+                            safeguarding
+                            privileged accounts, protecting critical assets, and preventing credential theft.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col" data-category="okta">
+                <div class="card h-100">
+                    <img src="https://www.okta.com/sites/default/files/media/image/2023-10/okta-logo-blue.svg"
+                        class="card-img-top" alt="Okta">
+                    <div class="card-body">
+                        <h5 class="card-title">Okta Workforce Identity</h5>
+                        <p class="card-text">Learn about Okta's identity-first security and user management.</p>
+                        <button class="btn btn-primary" onclick="toggleDetails('d4',this)">Read More</button>
+                        <p id="d4" class="card-text d-none">Explore how Okta provides identity-first security, adaptive
+                            MFA, and
+                            secure workforce access for modern businesses and cloud applications.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col" data-category="azuread">
+                <div class="card h-100">
+                    <img src="https://www.microsoft.com/en-us/security/business/identity-access-management/images/azure-ad-logo.svg"
+                        class="card-img-top" alt="Azure AD">
+                    <div class="card-body">
+                        <h5 class="card-title">Azure Active Directory</h5>
+                        <p class="card-text">Discover the capabilities of Azure AD for identity and access.</p>
+                        <button class="btn btn-primary" onclick="toggleDetails('d5',this)">Read More</button>
+                        <p id="d5" class="card-text d-none">Uncover Azure AD's powerful identity and access management
+                            features,
+                            including hybrid identity, conditional access, and B2C/B2B solutions.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col" data-category="sailpoint">
+                <div class="card h-100">
+                    <img src="https://www.sailpoint.com/wp-content/themes/sail-point/assets/images/logo.svg"
+                        class="card-img-top" alt="SailPoint">
+                    <div class="card-body">
+                        <h5 class="card-title">SailPoint Identity Governance</h5>
+                        <p class="card-text">Learn how SailPoint enables comprehensive identity governance.</p>
+                        <button class="btn btn-primary" onclick="toggleDetails('d6',this)">Read More</button>
+                        <p id="d6" class="card-text d-none">Understand how SailPoint automates identity governance,
+                            supports
+                            compliance, and provides visibility and control over user access across the enterprise.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div id="footer-container"></div> -->
+</body>
+ 
+</html>
+<script src="script.js"></script>
+<script>
+    function filterBlogs(category, event) {
+        event.preventDefault();
+        const blogs = document.querySelectorAll('#blogContainer .col');
+        blogs.forEach(blog => {
+            if (category === 'all' || blog.getAttribute('data-category') === category) {
+                blog.style.display = 'block';
+            } else {
+                blog.style.display = 'none';
+            }
+        });
+    }
+ 
+    function toggleDetails(id,button) {
+        // Find the closest card and toggle its details
+        function toggleDetails(id, button) {
+            const details = document.getElementById(id);
+            details.classList.toggle('d-none');
+            button.textContent = details.classList.contains('d-none') ? 'Read More' : 'Read Less';
+        }
+    }
+ 
+    function scrollToBlogs() {
+        document.getElementById('blogs').scrollIntoView({ behavior: 'smooth' });
+    }
+</script>
+ 
+</body>
+ 
+</html>

@@ -2,39 +2,45 @@
     background: linear-gradient(to right, #000000, #000000);
     padding: 50px 0;
 }
-body {
-    background: linear-gradient(to bottom, #040405, #181819);
-    font-family: Arial, sans-serif;
-}
+
 .hero-section {
-    margin-top: 100px;
-    text-align: center;
+    /* background-image: linear-gradient(to left bottom, #7c9dce, #a4b3da, #c6cbe6, #e4e4f2, #ffffff) !important; */
+    background-image: url(Images/index3\ image.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
     padding: 80px 20px;
     position: relative;
+    height: 100vh;
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 .hero-title {
     
     font-size: 2.5rem;
     font-weight: bold;
-    color: #0c1b33;
+    color: #f5f6f8;
 }
 .hero-subtitle {
     
     font-size: 1.1rem;
-    color: #606b85;
+    color: #ffffff;
     margin-bottom: 20px;
 }
 .btn-custom {
-    background-color: #0c1b33;
+    background-color: #ffffff !important;
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
 }
 .btn-custom-light {
-    background-color: #ffffff;
+    background-color: #ffffff !important;
     color: #0c1b33;
     padding: 10px 20px;
-    border: 1px solid #0c1b33;
+    border: 1px solid #ffffff;
     border-radius: 5px;
 }
 
@@ -62,6 +68,12 @@ body {
     background-color: white !important;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
+#featured-3{
+    background-image: url(Images/index3\ image.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
 .snapshot-title {
     font-size: 2rem;
     font-weight: bold;
@@ -84,7 +96,10 @@ body {
     color: #1a237e;
 }
 .reasons-section {
-    background: linear-gradient(to right, #ffffff, #ffffff);
+    background-image: url(Images/index3\ image.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px solid;
     padding: 50px 0;
 }
 .reasons-title {
@@ -292,4 +307,14 @@ p {
     .image {
         margin-top: 20px;
     }
+}
+.Insurance{
+    background-image: url(Images/index3\ image.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#contactus{
+    background-image: url(Images/index3\ image.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
