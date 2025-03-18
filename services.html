@@ -13,7 +13,7 @@
 
 <body>
     <div id="navbar-container"></div>
-    <!-- Hero Section -->
+  x
     <div class="col-12">
         <div class="hero-section">
             <div class="hero-content">
@@ -32,10 +32,10 @@
     </div>
 
 
-    <!-- Services Section -->
+    
     <div class="container service-container" id="services">
 
-        <!-- Service List -->
+      
         <div class="service-list">
             <button onclick="showService('iam')">Forgerock Identity Platform</button>
             <button onclick="showService('cyberark')">CyberArk</button>
@@ -44,7 +44,7 @@
             <button onclick="showService('azure')">Azure AD</button>
         </div>
 
-        <!-- Service Content -->
+    
         <div class="service-content" id="iam">
             <h2>Forgerock Identity Platform</h2>
             <p>The ForgeRock Identity Platform combines the best-in-class solutions for authentication, identity
@@ -446,30 +446,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    <script>
-        function scrollToServices() {
-            document.getElementById('services').scrollIntoView({ behavior: 'smooth' });
-        }
-
-        function showService(serviceId) {
-            document.querySelectorAll('.service-content').forEach(content => {
-                content.classList.remove('active');
-            });
-            document.getElementById(serviceId).classList.add('active');
-        }
-        window.onload = () => {
-            const serviceId = window.location.hash.replace('#', '') || 'iam';
-            showService(serviceId);
-        }
-        function loadHTML(id, file) {
-            fetch(file)
-                .then(response => response.text())
-                .then(data => document.getElementById(id).innerHTML = data)
-                .catch(error => console.error(`Error loading ${file}:`, error));
-        }
-
-        loadHTML('navbar-container', 'nav.html');
-        loadHTML('footer-container', 'footer.html');
+    <script src="script.js">
+        
     </script>
 
 </body>
