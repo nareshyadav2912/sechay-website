@@ -1,42 +1,49 @@
 .background-container {
-    background: linear-gradient(to right, #000000, #000000);
+    background: linear-gradient(to right, #ffffff, #ffffff);
     padding: 50px 0;
 }
-body {
-    background: linear-gradient(to bottom, #040405, #181819);
-    font-family: Arial, sans-serif;
-}
+
 .hero-section {
-    margin-top: 100px;
-    text-align: center;
+    /* background-image: linear-gradient(to left bottom, #7c9dce, #a4b3da, #c6cbe6, #e4e4f2, #ffffff) !important; */
+    background-image: url(Images/index3\ image.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
     padding: 80px 20px;
     position: relative;
+    height: 100vh;
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 .hero-title {
     
     font-size: 2.5rem;
     font-weight: bold;
-    color: #0c1b33;
+    color: #f5f6f8;
 }
 .hero-subtitle {
     
     font-size: 1.1rem;
-    color: #606b85;
+    color: #ffffff;
     margin-bottom: 20px;
 }
 .btn-custom {
-    background-color: #0c1b33;
+    background-color: #ffffff !important;
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
 }
 .btn-custom-light {
-    background-color: #ffffff;
+    background-color: #ffffff !important;
     color: #0c1b33;
     padding: 10px 20px;
-    border: 1px solid #0c1b33;
+    border: 1px solid #ffffff;
     border-radius: 5px;
 }
+
 .floating-icons {
     position: absolute;
     width: 100%;
@@ -61,6 +68,12 @@ body {
     background-color: white !important;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
+#featured-3{
+    background-image: url(Images/index3\ image.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
 .snapshot-title {
     font-size: 2rem;
     font-weight: bold;
@@ -83,7 +96,10 @@ body {
     color: #1a237e;
 }
 .reasons-section {
-    background: linear-gradient(to right, #ffffff, #ffffff);
+    background-image: url(Images/index3\ image.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px solid;
     padding: 50px 0;
 }
 .reasons-title {
@@ -292,46 +308,13 @@ p {
         margin-top: 20px;
     }
 }
-.work-with-us {
-    font-size: larger;
-    background: linear-gradient(90deg, #ffffff, #ffffff);
-    color: rgb(8, 8, 8);
-    padding: 50px 20px;
+.Insurance{
+    background-image: url(Images/index3\ image.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-.form-control {
-    font-size: medium;
-    background-color: white;
-    color: #333;
+#contactus{
+    background-image: url(Images/index3\ image.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-.submit-btn {
-    background-color: rgb(5, 4, 4);
-    color: #ffffff;
-    border: none;
-    padding: 10px 20px;
-    font-weight: bold;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.submit-btn:hover {
-    background-color: rgb(35, 138, 255);
-}
-.service-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.service-points li {
-    opacity: 2;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-}
-.service-card:hover .service-points li {
-    opacity: 1;
-    transform: translateY(0);
-}
-.service-points li:nth-child(1) { transition-delay: 0.1s; }
-.service-points li:nth-child(2) { transition-delay: 0.2s; }
-.service-points li:nth-child(3) { transition-delay: 0.3s; }
-.service-points li:nth-child(4) { transition-delay: 0.4s; }
