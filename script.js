@@ -45,28 +45,20 @@ function sendMail(event) {
     }, 5000); 
 }
 
-function openModal(modalId) {
-    document.getElementById(modalId).style.display = 'flex';
-}
-
-function closeModal(event) {
-    if (event) {
-        event.stopPropagation();
-    }
-    var modals = document.querySelectorAll('.modal');
-    modals.forEach(function (modal) {
-        modal.style.display = 'none';
-    });
-}
-
 function scrollToServices() {
-    document.getElementById('career').scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('services').scrollIntoView({ behavior: 'smooth' });
 }
-window.onclick = function (event) {
-    if (event.target.className === 'modal') {
-        closeModal();
-    }
-};
+
+function showService(serviceId) {
+    document.querySelectorAll('.service-content').forEach(content => {
+        content.classList.remove('active');
+    });
+    document.getElementById(serviceId).classList.add('active');
+}
+window.onload = () => {
+    const serviceId = window.location.hash.replace('#', '') || 'iam';
+    showService(serviceId);
+}
 function loadHTML(id, file) {
     fetch(file)
         .then(response => response.text())
@@ -76,3 +68,19 @@ function loadHTML(id, file) {
 
 loadHTML('navbar-container', 'nav.html');
 loadHTML('footer-container', 'footer.html');
+let slideIndex = 0;
+
+function showSlides() {
+    let slides = document.getElementsByClassName("mySlides");
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {
+        slideIndex = 1;
+    }
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+
+showSlides();

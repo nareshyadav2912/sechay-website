@@ -282,7 +282,7 @@
         </div>
     </div>
 
-    <div class="container">
+    <div class="container" id="work">
         <div class="header" id="career">
             <h1>The Future Awaits—Unleashed</h1>
             <p>The future is yours to shape. Explore endless opportunities to unlock your purpose, harness your
@@ -410,7 +410,39 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 
-    <script src="script.js"> </script>
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'flex';
+        }
+
+        function closeModal(event) {
+            if (event) {
+                event.stopPropagation();
+            }
+            var modals = document.querySelectorAll('.modal');
+            modals.forEach(function (modal) {
+                modal.style.display = 'none';
+            });
+        }
+
+        function scrollToServices() {
+            document.getElementById('career').scrollIntoView({ behavior: 'smooth' });
+        }
+        window.onclick = function (event) {
+            if (event.target.className === 'modal') {
+                closeModal();
+            }
+        };
+        function loadHTML(id, file) {
+            fetch(file)
+                .then(response => response.text())
+                .then(data => document.getElementById(id).innerHTML = data)
+                .catch(error => console.error(`Error loading ${file}:`, error));
+        }
+
+        loadHTML('navbar-container', 'nav.html');
+        loadHTML('footer-container', 'footer.html');
+    </script>
 </body>
 
 </html>
