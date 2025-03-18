@@ -27,6 +27,35 @@
             transition: background 0.3s;
         }
 
+        body.modal-open {
+            overflow: hidden;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .col {
+            display: flex;
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .card-body {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-text {
+            flex-grow: 1;
+        }
+
         @media (max-width: 768px) {
             .hero-title {
                 font-size: 2rem;
@@ -101,7 +130,10 @@
                         <p class="card-text">Digital transformation has reshaped how businesses operate, and identity
                             management plays a pivotal role in this journey. ForgeRock stands out as a leader in IAM
                             solutions, offering various use cases that cater to modern business needs.</p>
-                        <button class="btn btn-primary" onclick="toggleDetails('d1',this)">Read More</button>
+                        <button class="btn btn-primary"
+                            onclick="openBlogModal('Top 5 Use Cases of ForgeRock', document.getElementById('d1').innerHTML)">
+                            Read More
+                        </button>
                         <p id="d1" class="card-text d-none">
                             <strong>1. Customer Identity and Access Management (CIAM):</strong> ForgeRock enhances
                             customer onboarding with self-registration, social login, and profile management. These
@@ -121,7 +153,7 @@
                             tools for consent management and data transparency. It supports organizations in meeting
                             privacy standards like GDPR while empowering users with greater control over their personal
                             data.
-                        </p>+
+                        </p>
                     </div>
                 </div>
             </div>
@@ -131,11 +163,35 @@
                     <img src="https://images.seeklogo.com/logo-png/33/1/ping-identity-logo-png_seeklogo-336508.png"
                         class="card-img-top" alt="Ping">
                     <div class="card-body">
-                        <h5 class="card-title">Ping Identity Overview</h5>
-                        <p class="card-text">Discover how Ping provides secure and scalable identity solutions.</p>
-                        <button class="btn btn-primary" onclick="toggleDetails('d2',this)">Read More</button>
+                        <h5 class="card-title">The Future of Identity Management with Ping Identity</h5>
+                        <p class="card-text">In an era where digital transformation drives every industry, securing
+                            digital identities has become a cornerstone of enterprise success. Ping Identity, a leader
+                            in identity and access management (IAM), is at the forefront of this revolution, offering
+                            robust solutions that simplify security while enhancing user experience.</p>
+                        <button class="btn btn-primary"
+                            onclick="openBlogModal('The Future of Identity Management with Ping Identity', document.getElementById('d2').innerHTML)">
+                            Read More
+                        </button>
                         <p id="d2" class="card-text d-none">
-                            <li></li>
+                            <strong>1. Why Identity Matters:</strong> Identity is not just about access; it’s about
+                            trust. Enterprises today face mounting challenges from cyber threats, regulatory compliance,
+                            and the need for seamless user experiences. Ping Identity addresses these challenges through
+                            innovative tools like Single Sign-On (SSO), Multi-Factor Authentication (MFA), and
+                            intelligent API security. These features ensure that users can securely access resources on
+                            any device, anywhere in the world.<br><br>
+                            <strong>2. Zero Trust Security:</strong> One of the most critical shifts in cybersecurity is
+                            the adoption of Zero Trust principles. Ping Identity enables organizations to implement Zero
+                            Trust by ensuring secure, identity-defined access across hybrid environments. This approach
+                            minimizes risks while allowing businesses to scale their operations confidently.<br><br>
+                            <strong>3. Multi-Factor Authentication (MFA):</strong> With support for biometrics, mobile
+                            push notifications, and hardware tokens, ForgeRock provides robust MFA solutions. This adds
+                            an extra layer of security by requiring multiple verification factors for user
+                            authentication.<br><br>
+                            <strong>4. Looking Ahead:</strong> As technologies like artificial intelligence and
+                            decentralized identity gain traction, Ping Identity is poised to lead the way. By combining
+                            advanced IAM solutions with a focus on user-centric design, Ping continues to redefine how
+                            enterprises protect their digital assets.<br><br>
+
                         </p>
                     </div>
                 </div>
@@ -146,12 +202,26 @@
                     <img src="https://www.cyberark.com/wp-content/uploads/2021/06/CyberArk-Logo-Horizontal-Blue.svg"
                         class="card-img-top" alt="CyberArk">
                     <div class="card-body">
-                        <h5 class="card-title">CyberArk Privileged Access Management</h5>
-                        <p class="card-text">Understand CyberArk's approach to privileged access security.</p>
-                        <button class="btn btn-primary" onclick="toggleDetails('d3',this)">Read More</button>
-                        <p id="d3" class="card-text d-none">Get insights into CyberArk's leading solutions for
-                            safeguarding
-                            privileged accounts, protecting critical assets, and preventing credential theft.</p>
+                        <h5 class="card-title">CyberArk Endpoint Privilege Manager: A Shield Against Endpoint Attacks
+                        </h5>
+                        <p class="card-text">In today’s digital age, securing privileged access is critical for
+                            organizations to safeguard sensitive data and systems. CyberArk, a leader in Privileged
+                            Access Management (PAM), provides robust solutions to protect identities across human and
+                            machine users.</p>
+                        <button class="btn btn-primary"
+                            onclick="openBlogModal('CyberArk Endpoint Privilege Manager: A Shield Against Endpoint Attacks', document.getElementById('d3').innerHTML)">
+                            Read More
+                        </button>
+                        <p id="d3" class="card-text d-none">
+                            <strong>1. Enterprise Password Vault (EPV):</strong> Secure and encrypt passwords with
+                            Single Sign-On (SSO) capabilities.<br><br>
+                            <strong>2. Privileged Session Manager (PSM):</strong> Monitor and control privileged
+                            sessions to prevent misuse.<br><br>
+                            <strong>3. Privileged Threat Analytics (PTA):</strong> Detect anomalies and potential
+                            threats in privileged accounts.<br><br>
+                            <strong>4. SSH Key Manager:</strong> Manage SSH keys securely across your
+                            organization.<br><br>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -163,7 +233,10 @@
                     <div class="card-body">
                         <h5 class="card-title">Okta Workforce Identity</h5>
                         <p class="card-text">Learn about Okta's identity-first security and user management.</p>
-                        <button class="btn btn-primary" onclick="toggleDetails('d4',this)">Read More</button>
+                        <button class="btn btn-primary"
+                            onclick="openBlogModal('Top 5 Use Cases of ForgeRock', document.getElementById('d1').innerHTML)">
+                            Read More
+                        </button>
                         <p id="d4" class="card-text d-none">Explore how Okta provides identity-first security, adaptive
                             MFA, and
                             secure workforce access for modern businesses and cloud applications.</p>
@@ -178,7 +251,10 @@
                     <div class="card-body">
                         <h5 class="card-title">Azure Active Directory</h5>
                         <p class="card-text">Discover the capabilities of Azure AD for identity and access.</p>
-                        <button class="btn btn-primary" onclick="toggleDetails('d5',this)">Read More</button>
+                        <button class="btn btn-primary"
+                            onclick="openBlogModal('Top 5 Use Cases of ForgeRock', document.getElementById('d1').innerHTML)">
+                            Read More
+                        </button>
                         <p id="d5" class="card-text d-none">Uncover Azure AD's powerful identity and access management
                             features,
                             including hybrid identity, conditional access, and B2C/B2B solutions.</p>
@@ -193,7 +269,10 @@
                     <div class="card-body">
                         <h5 class="card-title">SailPoint Identity Governance</h5>
                         <p class="card-text">Learn how SailPoint enables comprehensive identity governance.</p>
-                        <button class="btn btn-primary" onclick="toggleDetails('d6',this)">Read More</button>
+                        <button class="btn btn-primary"
+                            onclick="openBlogModal('Top 5 Use Cases of ForgeRock', document.getElementById('d1').innerHTML)">
+                            Read More
+                        </button>
                         <p id="d6" class="card-text d-none">Understand how SailPoint automates identity governance,
                             supports
                             compliance, and provides visibility and control over user access across the enterprise.</p>
@@ -202,6 +281,19 @@
             </div>
         </div>
     </div>
+    <!-- Bootstrap Modal -->
+    <div class="modal fade" id="blogModal" tabindex="0" aria-labelledby="blogModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="blogModalLabel"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="blogModalContent"></div>
+            </div>
+        </div>
+    </div>
+
     <div id="footer-container"></div>
 </body>
 
@@ -220,14 +312,13 @@
         });
     }
 
-    function toggleDetails(id,button) {
-        // Find the closest card and toggle its details
-        function toggleDetails(id, button) {
-            const details = document.getElementById(id);
-            details.classList.toggle('d-none');
-            button.textContent = details.classList.contains('d-none') ? 'Read More' : 'Read Less';
-        }
+    function openBlogModal(title, content) {
+        document.getElementById('blogModalLabel').textContent = title;
+        document.getElementById('blogModalContent').innerHTML = content;
+        var modal = new bootstrap.Modal(document.getElementById('blogModal'));
+        modal.show();
     }
+
 
     function scrollToBlogs() {
         document.getElementById('blogs').scrollIntoView({ behavior: 'smooth' });
