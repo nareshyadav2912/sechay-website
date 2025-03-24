@@ -1,18 +1,26 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blogs Page</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <style>
         .card-img-top {
-            height: 200px;
-            width: 100%;
+            height: 90px;
+            width: 90px;
             width: min-content;
             object-fit: contain;
+            margin: auto;
+            display: block;
+            border-radius: 10px;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            /* Moves the card slightly up */
         }
 
         .explore-btn {
@@ -20,15 +28,11 @@
             padding: 0.75rem 1.5rem;
             font-size: 1.2rem;
             color: #4e54c8;
-            background: white;
+
             border: none;
             border-radius: 40px;
             cursor: pointer;
             transition: background 0.3s;
-        }
-
-        body.modal-open {
-            overflow: hidden;
         }
 
         .row {
@@ -53,6 +57,7 @@
         }
 
         .card-text {
+            color: black;
             flex-grow: 1;
         }
 
@@ -91,15 +96,25 @@
 
 <body>
     <div id="navbar-container"></div>
-    <section class="text-white text-center d-flex align-items-center justify-content-center hero-section"
-        style="min-height: 100vh; background: url(Images/blogback.png) no-repeat center center/cover;">
+    <section class="text-white text-center d-flex align-items-center justify-content-center hero-section" style="
+        min-height: 100vh;
+        background: url(Images/blogback.png) no-repeat center center/cover;
+      ">
         <div class="container">
-            <h1 class="display-4 fw-bold hero-title">Unlock the Future of Identity & Access Management.</h1>
-            <p class="lead hero-description">Identity and Access Management (IAM) is a security framework that controls
-                and manages user identities and access to systems, applications, and data. It includes key processes
-                like authentication, authorization, user provisioning, and access governance. IAM ensures secure access,
-                enhances compliance, and protects sensitive information across on-premise and cloud environments.</p>
-            <button class="explore-btn btn btn-light btn-lg mt-3" onclick="scrollToBlogs()">Read Blogs</button>
+            <h1 class="display-4 fw-bold hero-title">
+                Unlock the Future of Identity & Access Management.
+            </h1>
+            <p class="lead hero-description">
+                Identity and Access Management (IAM) is a security framework that
+                controls and manages user identities and access to systems,
+                applications, and data. It includes key processes like authentication,
+                authorization, user provisioning, and access governance. IAM ensures
+                secure access, enhances compliance, and protects sensitive information
+                across on-premise and cloud environments.
+            </p>
+            <button class="explore-btn btn btn-light btn-lg mt-3" onclick="scrollToBlogs()">
+                Read Blogs
+            </button>
         </div>
     </section>
     <div class="container mt-4" id="blogs">
@@ -109,14 +124,27 @@
                 Filter by Category
             </button>
             <ul class="dropdown-menu" aria-labelledby="blogCategory">
-                <li><a class="dropdown-item" href="#" onclick="filterBlogs('all', event)">All</a></li>
-                <li><a class="dropdown-item" href="#" onclick="filterBlogs('forgerock', event)">ForgeRock</a></li>
-                <li><a class="dropdown-item" href="#" onclick="filterBlogs('ping', event)">Ping</a></li>
-                <li><a class="dropdown-item" href="#" onclick="filterBlogs('cyberark', event)">CyberArk</a></li>
-                <li><a class="dropdown-item" href="#" onclick="filterBlogs('okta', event)">Okta</a></li>
-                <li><a class="dropdown-item" href="#" onclick="filterBlogs('azuread', event)">Azure AD</a></li>
-                <li><a class="dropdown-item" href="#" onclick="filterBlogs('sailpoint', event)">SailPoint</a></li>
-
+                <li>
+                    <a class="dropdown-item" href="#" onclick="filterBlogs('all', event)">All</a>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="#" onclick="filterBlogs('forgerock', event)">ForgeRock</a>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="#" onclick="filterBlogs('ping', event)">Ping</a>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="#" onclick="filterBlogs('cyberark', event)">CyberArk</a>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="#" onclick="filterBlogs('okta', event)">Okta</a>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="#" onclick="filterBlogs('azuread', event)">Azure AD</a>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="#" onclick="filterBlogs('sailpoint', event)">SailPoint</a>
+                </li>
             </ul>
         </div>
 
@@ -124,35 +152,52 @@
             <div class="col" data-category="forgerock">
                 <div class="card h-100">
                     <img src="https://www.vectorlogo.zone/logos/forgerock/forgerock-ar21.svg" class="card-img-top"
-                        alt="ForgeRock">
+                        alt="ForgeRock" />
                     <div class="card-body">
-                        <h5 class="card-title">Top 5 Use Cases of ForgeRock in Digital Transformation</h5>
-                        <p class="card-text">Digital transformation has reshaped how businesses operate, and identity
-                            management plays a pivotal role in this journey. ForgeRock stands out as a leader in IAM
-                            solutions, offering various use cases that cater to modern business needs.</p>
+                        <h5 class="card-title">
+                            Top 5 Use Cases of ForgeRock in Digital Transformation
+                        </h5>
+                        <p class="card-text">
+                            Digital transformation has reshaped how businesses operate, and
+                            identity management plays a pivotal role in this journey.
+                            ForgeRock stands out as a leader in IAM solutions, offering
+                            various use cases that cater to modern business needs.
+                        </p>
                         <button class="btn btn-primary"
                             onclick="openBlogModal('Top 5 Use Cases of ForgeRock', document.getElementById('d1').innerHTML)">
                             Read More
                         </button>
                         <p id="d1" class="card-text d-none">
-                            <strong>1. Customer Identity and Access Management (CIAM):</strong> ForgeRock enhances
-                            customer onboarding with self-registration, social login, and profile management. These
-                            features improve user experience while ensuring secure access and seamless service
-                            delivery.<br><br>
-                            <strong>2. Single Sign-On (SSO):</strong> ForgeRock enables users to access multiple
-                            applications with a single set of credentials. This reduces password fatigue, improves user
-                            productivity, and strengthens security across platforms.<br><br>
-                            <strong>3. Multi-Factor Authentication (MFA):</strong> With support for biometrics, mobile
-                            push notifications, and hardware tokens, ForgeRock provides robust MFA solutions. This adds
-                            an extra layer of security by requiring multiple verification factors for user
-                            authentication.<br><br>
-                            <strong>4. IoT Identity Management:</strong> ForgeRock ensures secure identity management
-                            for IoT devices, allowing businesses to control and authorize device access. This protects
-                            sensitive resources and supports large-scale IoT deployments.<br><br>
-                            <strong>5. Privacy and Compliance:</strong> ForgeRock aids in regulatory compliance with
-                            tools for consent management and data transparency. It supports organizations in meeting
-                            privacy standards like GDPR while empowering users with greater control over their personal
-                            data.
+                            <strong>1. Customer Identity and Access Management (CIAM):</strong><br />
+                            ✔ Facilitates self-service registration, social sign-ins, and
+                            dynamic profile management.<br>✔ Enhances engagement while ensuring
+                            secure and seamless digital interactions.<br>✔ Scales effortlessly
+                            to accommodate enterprises with vast user bases and intricate
+                            identity structures.<br />
+
+                            <strong>2. Single Sign-On (SSO):</strong><br />
+                            ✔ Eliminates redundant logins, improving user efficiency and
+                            reducing credential fatigue.<br>✔ Standardizes access control
+                            policies across diverse systems and services.<br>✔ Seamlessly
+                            integrates authentication across cloud, mobile, and hybrid IT
+                            environments.<br />
+                            <strong>3. Multi-Factor Authentication (MFA):</strong> <br />✔
+                            Supports biometric verification, mobile push approvals, and
+                            hardware-based security tokens.<br>✔ Utilizes contextual
+                            intelligence to prompt step-up authentication when anomalies are
+                            detected.<br>✔ Assists businesses in meeting stringent security
+                            standards like GDPR and PSD2.<br />
+
+                            <strong>4. IoT Identity Management:</strong> <br />✔ Establishes
+                            identity-driven access policies for IoT networks.<br>✔ Strengthens
+                            enterprise defenses against device-borne security threats.<br>✔
+                            Seamlessly scales to accommodate extensive and evolving IoT
+                            deployments.<br />
+                            <strong>5. Privacy and Compliance:</strong><br />✔ Enables
+                            granular user control over consent preferences for data usage.<br>✔
+                            Enhances transparency within identity and access management
+                            frameworks.<br>✔ Ensures compliance with regulatory standards such
+                            as GDPR, CCPA, and other privacy laws.<br />
                         </p>
                     </div>
                 </div>
@@ -161,36 +206,47 @@
             <div class="col" data-category="ping">
                 <div class="card h-100">
                     <img src="https://images.seeklogo.com/logo-png/33/1/ping-identity-logo-png_seeklogo-336508.png"
-                        class="card-img-top" alt="Ping">
+                        class="card-img-top" alt="Ping" />
                     <div class="card-body">
-                        <h5 class="card-title">The Future of Identity Management with Ping Identity</h5>
-                        <p class="card-text">In an era where digital transformation drives every industry, securing
-                            digital identities has become a cornerstone of enterprise success. Ping Identity, a leader
-                            in identity and access management (IAM), is at the forefront of this revolution, offering
-                            robust solutions that simplify security while enhancing user experience.</p>
+                        <h5 class="card-title">
+                            The Future of Identity Management with Ping Identity
+                        </h5>
+                        <p class="card-text">
+                            In an era where digital transformation drives every industry,
+                            securing digital identities has become a cornerstone of
+                            enterprise success. Ping Identity, a leader in identity and
+                            access management (IAM), is at the forefront of this revolution,
+                            offering robust solutions that simplify security while enhancing
+                            user experience.
+                        </p>
                         <button class="btn btn-primary"
                             onclick="openBlogModal('The Future of Identity Management with Ping Identity', document.getElementById('d2').innerHTML)">
                             Read More
                         </button>
                         <p id="d2" class="card-text d-none">
-                            <strong>1. Why Identity Matters:</strong> Identity is not just about access; it’s about
-                            trust. Enterprises today face mounting challenges from cyber threats, regulatory compliance,
-                            and the need for seamless user experiences. Ping Identity addresses these challenges through
-                            innovative tools like Single Sign-On (SSO), Multi-Factor Authentication (MFA), and
-                            intelligent API security. These features ensure that users can securely access resources on
-                            any device, anywhere in the world.<br><br>
-                            <strong>2. Zero Trust Security:</strong> One of the most critical shifts in cybersecurity is
-                            the adoption of Zero Trust principles. Ping Identity enables organizations to implement Zero
-                            Trust by ensuring secure, identity-defined access across hybrid environments. This approach
-                            minimizes risks while allowing businesses to scale their operations confidently.<br><br>
-                            <strong>3. Multi-Factor Authentication (MFA):</strong> With support for biometrics, mobile
-                            push notifications, and hardware tokens, ForgeRock provides robust MFA solutions. This adds
-                            an extra layer of security by requiring multiple verification factors for user
-                            authentication.<br><br>
-                            <strong>4. Looking Ahead:</strong> As technologies like artificial intelligence and
-                            decentralized identity gain traction, Ping Identity is poised to lead the way. By combining
-                            advanced IAM solutions with a focus on user-centric design, Ping continues to redefine how
-                            enterprises protect their digital assets.<br><br>
+                            <strong>1. Why Identity Matters:</strong> <br />
+                            ✔ Enables users to access multiple applications with a single
+                            set of credentials.<br />✔ Reduces password fatigue while
+                            enhancing security through centralized authentication.<br />✔
+                            Uses contextual factors like location and device intelligence
+                            for risk-based authentication.<br />
+                            <strong>2. Zero Trust Security:</strong><br />
+                            ✔ Implements identity-centric security to reduce insider and
+                            external threats.<br />✔ Integrates with leading security tools
+                            to provide end-to-end access governance.<br />✔ Strengthens
+                            hybrid and multi-cloud security by enforcing least privilege
+                            access.<br />
+                            <strong>3. Multi-Factor Authentication (MFA):</strong><br />
+                            ✔ Supports biometrics, mobile push notifications, and hardware
+                            tokens for verification.<br />✔ Detects anomalies and prompts
+                            additional verification when necessary.<br />✔ Ensures
+                            compliance with global security standards such as GDPR and NIST
+                            guidelines.<br />
+                            <strong>4. Looking Ahead:</strong><br />✔ Protects API endpoints
+                            from unauthorized access and token-based attacks.<br />✔ Enables
+                            secure federation across enterprises, partners, and third-party
+                            applications.<br />✔ Enhances customer experience with secure,
+                            cross-platform authentication.<br />
                         </p>
                     </div>
                 </div>
@@ -198,28 +254,51 @@
 
             <div class="col" data-category="cyberark">
                 <div class="card h-100">
-                    <img src="https://www.cyberark.com/wp-content/uploads/2021/06/CyberArk-Logo-Horizontal-Blue.svg"
-                        class="card-img-top" alt="CyberArk">
+                    <img src="./Images/cyberark.jpeg" class="card-img-top" alt="CyberArk" />
                     <div class="card-body">
-                        <h5 class="card-title">CyberArk Endpoint Privilege Manager: A Shield Against Endpoint Attacks
+                        <h5 class="card-title">
+                            CyberArk Endpoint Privilege Manager: A Shield Against Endpoint
+                            Attacks
                         </h5>
-                        <p class="card-text">In today’s digital age, securing privileged access is critical for
-                            organizations to safeguard sensitive data and systems. CyberArk, a leader in Privileged
-                            Access Management (PAM), provides robust solutions to protect identities across human and
-                            machine users.</p>
+                        <p class="card-text">
+                            In today’s digital age, securing privileged access is critical
+                            for organizations to safeguard sensitive data and systems.
+                            CyberArk, a leader in Privileged Access Management (PAM),
+                            provides robust solutions to protect identities across human and
+                            machine users.
+                        </p>
                         <button class="btn btn-primary"
                             onclick="openBlogModal('CyberArk Endpoint Privilege Manager: A Shield Against Endpoint Attacks', document.getElementById('d3').innerHTML)">
                             Read More
                         </button>
                         <p id="d3" class="card-text d-none">
-                            <strong>1. Enterprise Password Vault (EPV):</strong> Secure and encrypt passwords with
-                            Single Sign-On (SSO) capabilities.<br><br>
-                            <strong>2. Privileged Session Manager (PSM):</strong> Monitor and control privileged
-                            sessions to prevent misuse.<br><br>
-                            <strong>3. Privileged Threat Analytics (PTA):</strong> Detect anomalies and potential
-                            threats in privileged accounts.<br><br>
-                            <strong>4. SSH Key Manager:</strong> Manage SSH keys securely across your
-                            organization.<br><br>
+                            <strong>1. Enterprise Password Vault (EPV):</strong><br />
+                            ✔ Encrypts and isolates privileged credentials to prevent
+                            unauthorized exposure.<br />✔ Automates password rotation and
+                            enforcement of security policies.<br />✔ Eliminates the risk of
+                            hardcoded credentials in scripts, applications, and services.
+
+                            <br />
+
+                            <strong>2. Privileged Session Manager (PSM):</strong><br />✔
+                            Isolates privileged sessions to prevent direct access to
+                            critical systems.<br />✔ Provides real-time session recording
+                            and auditing for compliance reporting.<br />✔ Detects and blocks
+                            anomalous user behavior before it leads to security
+                            incidents.<br />
+                            <strong>3. PJust-in-Time (JIT) Access for Least Privilege
+                                Enforcement</strong><br />
+                            ✔ Reduces the attack surface by eliminating persistent admin
+                            credentials.<br />✔ Grants access only for the required
+                            duration, reducing privilege abuse risks.<br />✔ Seamlessly
+                            integrates with ITSM and identity governance tools for
+                            controlled access provisioning.<br />
+                            <strong>4.Threat Analytics for Proactive Risk Mitigation</strong><br />
+                            ✔ Identifies and alerts on unusual privileged account
+                            activity.<br />✔ Detects privilege escalations, lateral
+                            movement, and potential credential theft.<br />✔ Integrates with
+                            Security Information and Event Management (SIEM) platforms for
+                            advanced threat correlation.<br />
                         </p>
                     </div>
                 </div>
@@ -227,60 +306,184 @@
 
             <div class="col" data-category="okta">
                 <div class="card h-100">
-                    <img src="https://www.okta.com/sites/default/files/media/image/2023-10/okta-logo-blue.svg"
-                        class="card-img-top" alt="Okta">
+                    <img src="./Images/okta.png" class="card-img-top" alt="Okta" />
                     <div class="card-body">
-                        <h5 class="card-title">Okta Workforce Identity</h5>
-                        <p class="card-text">Learn about Okta's identity-first security and user management.</p>
+                        <h5 class="card-title">
+                            Okta: The Backbone of Modern Identity Security
+                        </h5>
+                        <p class="card-text">
+                            Okta, a leading identity and access management (IAM) platform,
+                            empowers organizations with robust authentication, access
+                            controls, and threat detection capabilities.
+                        </p>
                         <button class="btn btn-primary"
-                            onclick="openBlogModal('Top 5 Use Cases of ForgeRock', document.getElementById('d1').innerHTML)">
+                            onclick="openBlogModal('Okta: The Backbone of Modern Identity Security', document.getElementById('d4').innerHTML)">
                             Read More
                         </button>
-                        <p id="d4" class="card-text d-none">Explore how Okta provides identity-first security, adaptive
-                            MFA, and
-                            secure workforce access for modern businesses and cloud applications.</p>
+                        <p id="d4" class="card-text d-none">
+                            <strong>1. Frictionless Authentication with Seamless Access
+                                Management</strong><br />
+                            ✔ Reduces password fatigue, mitigating exposure to credential
+                            theft.<br />✔ Enhances workforce agility by simplifying access
+                            to cloud, on-premises, and hybrid environments.<br />✔
+                            Seamlessly integrates with thousands of third-party
+                            applications, including Microsoft 365, Salesforce, and AWS.<br />
+                            <strong>2. Context-Aware Multi-Factor Authentication (MFA) for
+                                Dynamic Protection</strong><br />
+                            ✔ Implements risk-adaptive authentication based on user
+                            behavior, device health, and login context.<br />✔ Reduces
+                            unnecessary authentication prompts, improving user experience
+                            without compromising security.<br />✔ Supports passwordless
+                            authentication methods, leveraging biometrics and security keys
+                            for a seamless login process.<br />
+                            <strong>3. Precision-Based Access Controls with Dynamic
+                                Policies</strong>
+                            <br />
+                            ✔ Enforces granular access restrictions based on real-time risk
+                            indicators such as IP address, device posture, and behavioral
+                            analytics.<br />✔ Implements Zero Trust architecture, ensuring
+                            continuous verification before granting access.<br />✔ Reduces
+                            authentication fatigue by eliminating unnecessary verification
+                            steps for low-risk scenarios.<br />
+                            <strong>4. Least Privilege Enforcement with Temporary Elevated
+                                Access</strong><br />
+                            ✔ Eliminates standing administrative privileges, reducing the
+                            attack surface for credential misuse.<br />✔ Provides an audit
+                            trail for every privileged action, enhancing visibility and
+                            compliance.<br />✔ Automates access provisioning and
+                            deprovisioning, preventing privilege creep over time.<br />
+                            <strong>5. AI-Driven Identity Intelligence for Proactive Threat
+                                Detection</strong><br />
+                            ✔ Detects and mitigates high-risk authentication attempts,
+                            including credential stuffing and brute-force attacks.<br />✔
+                            Integrates with Security Information and Event Management (SIEM)
+                            solutions for real-time threat monitoring and automated
+                            response.<br />✔ Continuously refines risk models, enabling
+                            proactive defense against evolving cyber threats.<br />
+                        </p>
                     </div>
                 </div>
             </div>
 
             <div class="col" data-category="azuread">
                 <div class="card h-100">
-                    <img src="https://www.microsoft.com/en-us/security/business/identity-access-management/images/azure-ad-logo.svg"
-                        class="card-img-top" alt="Azure AD">
+                    <img src="./Images/azure.png" class="card-img-top" alt="Azure AD" />
                     <div class="card-body">
-                        <h5 class="card-title">Azure Active Directory</h5>
-                        <p class="card-text">Discover the capabilities of Azure AD for identity and access.</p>
+                        <h5 class="card-title">
+                            Azure Active Directory (Azure AD): The Cornerstone of Identity
+                            Security
+                        </h5>
+                        <p class="card-text">
+                            Azure Active Directory (Azure AD), Microsoft’s cloud-based
+                            identity and access management (IAM) solution, provides
+                            businesses with robust security, streamlined authentication, and
+                            centralized access control.
+                        </p>
                         <button class="btn btn-primary"
-                            onclick="openBlogModal('Top 5 Use Cases of ForgeRock', document.getElementById('d1').innerHTML)">
+                            onclick="openBlogModal('Axure Active Directory', document.getElementById('d5').innerHTML)">
                             Read More
                         </button>
-                        <p id="d5" class="card-text d-none">Uncover Azure AD's powerful identity and access management
-                            features,
-                            including hybrid identity, conditional access, and B2C/B2B solutions.</p>
+                        <p id="d5" class="card-text d-none">
+                            <strong>1. Unified Authentication with Single Sign-On (SSO)</strong><br />
+                            This eliminates the need for multiple passwords, reducing
+                            password fatigue and improving user experience.<br />
+                            ✔ Reduces the risk of credential theft due to password reuse.<br />
+                            ✔ Enhances productivity with seamless access to business
+                            apps.<br />✔ Simplifies IT management by reducing
+                            password-related support tickets. <br />With SSO, businesses can
+                            integrate thousands of applications, including Microsoft 365,
+                            Salesforce, and ServiceNow, ensuring a smooth and secure
+                            authentication experience.<br /><br />
+                            <strong>2. Advanced Security with Multi-Factor Authentication
+                                (MFA)</strong>
+                            Multi-Factor Authentication (MFA) fortifies account security by
+                            requiring users to authenticate using multiple verification
+                            methods <br />✔ Strengthens protection against phishing and
+                            credential theft.<br />✔ Enables risk-based MFA enforcement for
+                            high-risk activities.<br />✔ Reduces unauthorized access while
+                            maintaining user-friendly authentication.<br />
+                            <strong>3.Context-Aware Security with Conditional Access</strong>
+                            Conditional Access enables organizations to define intelligent
+                            security policies that evaluate real-time risk factors before
+                            granting access. <br />
+                            ✔ Enforces access restrictions based on device compliance,
+                            location, and risk level.<br />✔ Adapts security measures
+                            dynamically, prompting MFA only for high-risk sign-ins.<br />✔
+                            Supports Zero Trust security principles by continuously
+                            verifying access requests.<br />
+                            <strong>4.Secure Privileged Access with Privileged Identity
+                                Management (PIM)</strong>
+                            Privileged Identity Management (PIM) provides organizations with
+                            granular control over privileged accounts, limiting excessive
+                            permissions and reducing security risks. <br />✔ Implements
+                            Just-in-Time (JIT) access, granting admin rights only when
+                            required.<br />✔ Monitors and flags suspicious privilege
+                            escalations.<br />✔ Enforces approval-based, time-limited access
+                            to critical resources.
+                        </p>
                     </div>
                 </div>
             </div>
 
             <div class="col" data-category="sailpoint">
                 <div class="card h-100">
-                    <img src="https://www.sailpoint.com/wp-content/themes/sail-point/assets/images/logo.svg"
-                        class="card-img-top" alt="SailPoint">
+                    <img src="./Images/Sailpoint1.png" class="card-img-top" alt="SailPoint" />
                     <div class="card-body">
-                        <h5 class="card-title">SailPoint Identity Governance</h5>
-                        <p class="card-text">Learn how SailPoint enables comprehensive identity governance.</p>
+                        <h5 class="card-title">
+                            SailPoint: Transforming Identity Governance for the Modern
+                            Enterprise
+                        </h5>
+                        <p class="card-text">
+                            SailPoint, a leader in identity security, provides an
+                            intelligent identity governance solution that empowers
+                            organizations to automate access controls, enforce compliance,
+                            and mitigate risks associated with identity-based threats.
+                        </p>
                         <button class="btn btn-primary"
-                            onclick="openBlogModal('Top 5 Use Cases of ForgeRock', document.getElementById('d1').innerHTML)">
+                            onclick="openBlogModal('SailPoint: Transforming Identity Governance for the Modern Enterprise', document.getElementById('d6').innerHTML)">
                             Read More
                         </button>
-                        <p id="d6" class="card-text d-none">Understand how SailPoint automates identity governance,
-                            supports
-                            compliance, and provides visibility and control over user access across the enterprise.</p>
+                        <p id="d6" class="card-text d-none">
+                            <strong>1. Automated Identity Lifecycle Management for Seamless
+                                Operations</strong><br />
+                            ✔ Streamlines onboarding and offboarding processes to enhance
+                            efficiency.<br />✔ Reduces human errors by automating access
+                            provisioning and deprovisioning.<br />✔ Ensures compliance with
+                            industry regulations by enforcing access policies.<br />
+                            <strong>2. Role-Based Access Control (RBAC) for Precision-Based
+                                Access Management</strong><br />
+                            ✔ Assigns appropriate access based on predefined roles,
+                            minimizing excessive privileges.<br />✔ Reduces the risk of
+                            insider threats by enforcing least privilege principles.<br />✔
+                            Automates role assignments and modifications, ensuring
+                            continuous compliance.<br />
+                            <strong>3. AI-Driven Identity Analytics for Risk-Based Decision
+                                Making</strong><br />
+                            ✔ Identifies high-risk access patterns and proactively mitigates
+                            threats.<br />✔ Uses AI-driven insights to refine access
+                            recommendations and approvals.<br />✔ Reduces manual review
+                            processes, accelerating identity governance decisions<br />
+                            <strong>4. Compliance-Ready Identity Governance for Regulatory
+                                Assurance</strong><br />
+                            ✔ Automates audit reporting, reducing the burden of manual
+                            compliance checks.<br />✔ Tracks and monitors access
+                            certifications to prevent unauthorized privileges.<br />✔
+                            Ensures adherence to regulatory frameworks such as GDPR, HIPAA,
+                            and SOX.<br />
+                            <strong>5. Cloud-First Identity Security for Hybrid IT
+                                Environments</strong><br />
+                            ✔ Enables seamless access governance for multi-cloud
+                            environments, including AWS, Azure, and Google Cloud.<br />✔
+                            Ensures visibility and control over all user identities,
+                            regardless of location.<br />✔ Supports integration with
+                            third-party security tools, strengthening overall cyber
+                            resilience.<br />
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Bootstrap Modal -->
     <div class="modal fade" id="blogModal" tabindex="0" aria-labelledby="blogModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -292,38 +495,33 @@
             </div>
         </div>
     </div>
-
     <div id="footer-container"></div>
-</body>
-
-</html>
-<script src="script.js"></script>
-<script>
-    function filterBlogs(category, event) {
-        event.preventDefault();
-        const blogs = document.querySelectorAll('#blogContainer .col');
-        blogs.forEach(blog => {
-            if (category === 'all' || blog.getAttribute('data-category') === category) {
-                blog.style.display = 'block';
-            } else {
-                blog.style.display = 'none';
-            }
-        });
-    }
-
-    function openBlogModal(title, content) {
-        document.getElementById('blogModalLabel').textContent = title;
-        document.getElementById('blogModalContent').innerHTML = content;
-        var modal = new bootstrap.Modal(document.getElementById('blogModal'));
-        modal.show();
-    }
-
-
-    function scrollToBlogs() {
-        document.getElementById('blogs').scrollIntoView({ behavior: 'smooth' });
-    }
-</script>
-
+    <script src="script.js"></script>
+    <script>
+        function filterBlogs(category, event) {
+            event.preventDefault();
+            const blogs = document.querySelectorAll("#blogContainer .col");
+            blogs.forEach((blog) => {
+                if (
+                    category === "all" ||
+                    blog.getAttribute("data-category") === category
+                ) {
+                    blog.style.display = "block";
+                } else {
+                    blog.style.display = "none";
+                }
+            });
+        }
+        function openBlogModal(title, content) {
+            document.getElementById("blogModalLabel").textContent = title;
+            document.getElementById("blogModalContent").innerHTML = content;
+            var modal = new bootstrap.Modal(document.getElementById("blogModal"));
+            modal.show();
+        }
+        function scrollToBlogs() {
+            document.getElementById("blogs").scrollIntoView({ behavior: "smooth" });
+        }
+    </script>
 </body>
 
 </html>
