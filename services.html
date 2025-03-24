@@ -1,455 +1,1154 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Our Services</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="services.css">
-</head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="services.css" />
+  </head>
 
-<body>
+  <body>
     <div id="navbar-container"></div>
-  x
+    x
     <div class="col-12">
-        <div class="hero-section">
-            <div class="hero-content">
-                <h1>Control at Your Fingertips, Security at Its Best</h1>
-                <p>We deliver cutting-edge Identity & Access Management (IAM) solutions, helping organizations secure
-                    and
-                    manage digital identities effectively. Our expertise covers industry-leading platforms, including
-                    ForgeRock, Ping Identity, CyberArk, Okta, and Azure AD, offering tailored solutions for seamless
-                    access,
-                    robust security, and regulatory compliance. With a focus on innovation and customer satisfaction,
-                    Sechay
-                    Services ensures your business stays secure and future-ready.</p>
-                <button class="explore-btn" onclick="scrollToServices()">Explore Services</button>
-            </div>
+      <div class="hero-section">
+        <div class="hero-content">
+          <h1>Control at Your Fingertips, Security at Its Best</h1>
+          <p>
+            We deliver cutting-edge Identity & Access Management (IAM)
+            solutions, helping organizations secure and manage digital
+            identities effectively. Our expertise covers industry-leading
+            platforms, including ForgeRock, Ping Identity, CyberArk, Okta, and
+            Azure AD, offering tailored solutions for seamless access, robust
+            security, and regulatory compliance. With a focus on innovation and
+            customer satisfaction, Sechay Services ensures your business stays
+            secure and future-ready.
+          </p>
+          <button class="explore-btn" onclick="scrollToServices()">
+            Explore Services
+          </button>
         </div>
+      </div>
     </div>
 
-
-    
     <div class="container service-container" id="services">
+      <div class="service-list">
+        <button onclick="showService('iam')">
+          Forgerock Identity Platform
+        </button>
+        <button onclick="showService('cyberark')">CyberArk</button>
+        <button onclick="showService('okta')">Okta</button>
+        <button onclick="showService('ping')">Ping Identity</button>
+        <button onclick="showService('azure')">Azure AD</button>
+      </div>
 
-      
-        <div class="service-list">
-            <button onclick="showService('iam')">Forgerock Identity Platform</button>
-            <button onclick="showService('cyberark')">CyberArk</button>
-            <button onclick="showService('okta')">Okta</button>
-            <button onclick="showService('ping')">Ping Identity</button>
-            <button onclick="showService('azure')">Azure AD</button>
-        </div>
+      <div class="service-content" id="iam">
+        <h2>Forgerock Identity Platform</h2>
+        <p>
+          The ForgeRock Identity Platform combines the best-in-class solutions
+          for authentication, identity governance, access management, and
+          directory services.
+        </p>
 
-    
-        <div class="service-content" id="iam">
-            <h2>Forgerock Identity Platform</h2>
-            <p>The ForgeRock Identity Platform combines the best-in-class solutions for authentication, identity
-                governance, access management, and directory services.</p>
-
-            <div class="card">
-                <div class="list-item">
-                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9 18l6-6-6-6" stroke="#007bff" stroke-width="1" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                        <span>Combines best-in-class solutions for authentication, identity governance, access
-                            management, and directory services.</span>
-                    </div>
-
-                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9 18l6-6-6-6" stroke="#007bff" stroke-width="1" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                        <span>Manages the entire identity lifecycle, from user registration to deactivation, ensuring a
-                            secure and compliant process.</span>
-                    </div>
-
-                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9 18l6-6-6-6" stroke="#007bff" stroke-width="1" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                        <span>Enforces granular access control policies to regulate and manage user access based on
-                            roles, context, and risk.</span>
-                    </div>
-
-                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9 18l6-6-6-6" stroke="#007bff" stroke-width="1" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                        <span>Implements adaptive security mechanisms, adjusting authentication and authorization
-                            methods based on user behavior and risk profiles.</span>
-                    </div>
-
-                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9 18l6-6-6-6" stroke="#007bff" stroke-width="1" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                        <span>Seamlessly integrates with external applications, services, and cloud environments using
-                            standard protocols (e.g., OAuth, SAML, OpenID Connect).</span>
-                    </div>
-
-                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9 18l6-6-6-6" stroke="#007bff" stroke-width="1" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                        <span>Protects against data breaches, identity theft, and fraud by providing advanced security
-                            measures and continuous monitoring.</span>
-                    </div>
-
-                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9 18l6-6-6-6" stroke="#007bff" stroke-width="1" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                        <span>Scales to meet the needs of both enterprise-level and customer-facing solutions, ensuring
-                            flexibility and growth for any organization.</span>
-                    </div>
-                </div>
-
+        <div class="card">
+          <div class="list-item">
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                margin-bottom: 8px;
+              "
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="#007bff"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 18l6-6-6-6"
+                  stroke="#007bff"
+                  stroke-width="1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span
+                >Combines best-in-class solutions for authentication, identity
+                governance, access management, and directory services.</span
+              >
             </div>
-        </div>
-        <div class="service-content" id="cyberark">
-            <h2>CyberArk</h2>
-            <p>The ForgeRock Identity Platform combines the best-in-class solutions for authentication, identity
-                governance, access management, and directory services.</p>
 
-            <div class="card">
-                <div class="list-item">
-                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9 18l6-6-6-6" stroke="#007bff" stroke-width="1" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                        <span>CyberArk provides Privileged Access Management (PAM) to protect and manage privileged
-                            accounts.</span>
-                    </div>
-
-                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9 18l6-6-6-6" stroke="#007bff" stroke-width="1" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                        <span>CyberArk records and monitors privileged sessions for compliance and security
-                            auditing.</span>
-                    </div>
-
-                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9 18l6-6-6-6" stroke="#007bff" stroke-width="1" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                        <span>The platform enforces least privilege access to minimize unnecessary permissions.</span>
-                    </div>
-
-                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9 18l6-6-6-6" stroke="#007bff" stroke-width="1" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                        <span>CyberArk detects and responds to threats targeting privileged accounts in
-                            real-time.</span>
-                    </div>
-
-                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9 18l6-6-6-6" stroke="#007bff" stroke-width="1" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                        <span>CyberArk extends security to cloud environments, including AWS, Azure, and Google
-                            Cloud.</span>
-                    </div>
-
-                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9 18l6-6-6-6" stroke="#007bff" stroke-width="1" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                        <span>It integrates with IAM systems to streamline user identity and access management.</span>
-                    </div>
-
-                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9 18l6-6-6-6" stroke="#007bff" stroke-width="1" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                        <span>Scales to meet the needs of both enterprise-level and customer-facing solutions, ensuring
-                            flexibility and growth for any organization.</span>
-                    </div>
-                </div>
-
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                margin-bottom: 8px;
+              "
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="#007bff"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 18l6-6-6-6"
+                  stroke="#007bff"
+                  stroke-width="1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span
+                >Manages the entire identity lifecycle, from user registration
+                to deactivation, ensuring a secure and compliant process.</span
+              >
             </div>
-        </div>
-        <div class="service-content" id="okta">
-            <h2>Okta</h2>
-            <p>The ForgeRock Identity Platform combines the best-in-class solutions for authentication, identity
-                governance, access management, and directory services.</p>
 
-            <div class="card">
-                <div class="list-item">
-                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9 18l6-6-6-6" stroke="#007bff" stroke-width="1" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                        <span>Combines best-in-class solutions for authentication, identity governance, access
-                            management, and directory services.</span>
-                    </div>
-
-                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9 18l6-6-6-6" stroke="#007bff" stroke-width="1" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                        <span>Manages the entire identity lifecycle, from user registration to deactivation, ensuring a
-                            secure and compliant process.</span>
-                    </div>
-
-                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9 18l6-6-6-6" stroke="#007bff" stroke-width="1" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                        <span>Enforces granular access control policies to regulate and manage user access based on
-                            roles, context, and risk.</span>
-                    </div>
-
-                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9 18l6-6-6-6" stroke="#007bff" stroke-width="1" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                        <span>Implements adaptive security mechanisms, adjusting authentication and authorization
-                            methods based on user behavior and risk profiles.</span>
-                    </div>
-
-                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9 18l6-6-6-6" stroke="#007bff" stroke-width="1" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                        <span>Seamlessly integrates with external applications, services, and cloud environments using
-                            standard protocols (e.g., OAuth, SAML, OpenID Connect).</span>
-                    </div>
-
-                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9 18l6-6-6-6" stroke="#007bff" stroke-width="1" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                        <span>Protects against data breaches, identity theft, and fraud by providing advanced security
-                            measures and continuous monitoring.</span>
-                    </div>
-
-                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9 18l6-6-6-6" stroke="#007bff" stroke-width="1" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                        <span>Scales to meet the needs of both enterprise-level and customer-facing solutions, ensuring
-                            flexibility and growth for any organization.</span>
-                    </div>
-                </div>
-
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                margin-bottom: 8px;
+              "
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="#007bff"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 18l6-6-6-6"
+                  stroke="#007bff"
+                  stroke-width="1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span
+                >Enforces granular access control policies to regulate and
+                manage user access based on roles, context, and risk.</span
+              >
             </div>
-        </div>
-        <div class="service-content" id="ping">
-            <h2>Ping Identity</h2>
-            <p>The ForgeRock Identity Platform combines the best-in-class solutions for authentication, identity
-                governance, access management, and directory services.</p>
 
-            <div class="card" id="ping1">
-                <div class="list-item">
-                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9 18l6-6-6-6" stroke="#007bff" stroke-width="1" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                        <span>Combines best-in-class solutions for authentication, identity governance, access
-                            management, and directory services.</span>
-                    </div>
-
-                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9 18l6-6-6-6" stroke="#007bff" stroke-width="1" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                        <span>Manages the entire identity lifecycle, from user registration to deactivation, ensuring a
-                            secure and compliant process.</span>
-                    </div>
-
-                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9 18l6-6-6-6" stroke="#007bff" stroke-width="1" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                        <span>Enforces granular access control policies to regulate and manage user access based on
-                            roles, context, and risk.</span>
-                    </div>
-
-                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9 18l6-6-6-6" stroke="#007bff" stroke-width="1" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                        <span>Implements adaptive security mechanisms, adjusting authentication and authorization
-                            methods based on user behavior and risk profiles.</span>
-                    </div>
-
-                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9 18l6-6-6-6" stroke="#007bff" stroke-width="1" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                        <span>Seamlessly integrates with external applications, services, and cloud environments using
-                            standard protocols (e.g., OAuth, SAML, OpenID Connect).</span>
-                    </div>
-
-                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9 18l6-6-6-6" stroke="#007bff" stroke-width="1" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                        <span>Protects against data breaches, identity theft, and fraud by providing advanced security
-                            measures and continuous monitoring.</span>
-                    </div>
-
-                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9 18l6-6-6-6" stroke="#007bff" stroke-width="1" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                        <span>Scales to meet the needs of both enterprise-level and customer-facing solutions, ensuring
-                            flexibility and growth for any organization.</span>
-                    </div>
-                </div>
-
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                margin-bottom: 8px;
+              "
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="#007bff"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 18l6-6-6-6"
+                  stroke="#007bff"
+                  stroke-width="1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span
+                >Implements adaptive security mechanisms, adjusting
+                authentication and authorization methods based on user behavior
+                and risk profiles.</span
+              >
             </div>
-        </div>
-        <div class="service-content" id="azure">
-            <h2>Azure AD</h2>
-            <p>The ForgeRock Identity Platform combines the best-in-class solutions for authentication, identity
-                governance, access management, and directory services.</p>
-            <div class="card">
-                <div class="list-item">
-                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9 18l6-6-6-6" stroke="#007bff" stroke-width="1" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                        <span>Combines best-in-class solutions for authentication, identity governance, access
-                            management, and directory services.</span>
-                    </div>
 
-                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9 18l6-6-6-6" stroke="#007bff" stroke-width="1" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                        <span>Manages the entire identity lifecycle, from user registration to deactivation, ensuring a
-                            secure and compliant process.</span>
-                    </div>
-
-                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9 18l6-6-6-6" stroke="#007bff" stroke-width="1" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                        <span>Enforces granular access control policies to regulate and manage user access based on
-                            roles, context, and risk.</span>
-                    </div>
-
-                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9 18l6-6-6-6" stroke="#007bff" stroke-width="1" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                        <span>Implements adaptive security mechanisms, adjusting authentication and authorization
-                            methods based on user behavior and risk profiles.</span>
-                    </div>
-
-                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9 18l6-6-6-6" stroke="#007bff" stroke-width="1" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                        <span>Seamlessly integrates with external applications, services, and cloud environments using
-                            standard protocols (e.g., OAuth, SAML, OpenID Connect).</span>
-                    </div>
-
-                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9 18l6-6-6-6" stroke="#007bff" stroke-width="1" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                        <span>Protects against data breaches, identity theft, and fraud by providing advanced security
-                            measures and continuous monitoring.</span>
-                    </div>
-
-                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9 18l6-6-6-6" stroke="#007bff" stroke-width="1" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                        <span>Scales to meet the needs of both enterprise-level and customer-facing solutions, ensuring
-                            flexibility and growth for any organization.</span>
-                    </div>
-                </div>
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                margin-bottom: 8px;
+              "
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="#007bff"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 18l6-6-6-6"
+                  stroke="#007bff"
+                  stroke-width="1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span
+                >Seamlessly integrates with external applications, services, and
+                cloud environments using standard protocols (e.g., OAuth, SAML,
+                OpenID Connect).</span
+              >
             </div>
+
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                margin-bottom: 8px;
+              "
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="#007bff"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 18l6-6-6-6"
+                  stroke="#007bff"
+                  stroke-width="1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span
+                >Protects against data breaches, identity theft, and fraud by
+                providing advanced security measures and continuous
+                monitoring.</span
+              >
+            </div>
+
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                margin-bottom: 8px;
+              "
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="#007bff"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 18l6-6-6-6"
+                  stroke="#007bff"
+                  stroke-width="1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span
+                >Scales to meet the needs of both enterprise-level and
+                customer-facing solutions, ensuring flexibility and growth for
+                any organization.</span
+              >
+            </div>
+          </div>
         </div>
+      </div>
+      <div class="service-content" id="cyberark">
+        <h2>CyberArk</h2>
+        <p>
+          The CyberArk Identity Platform offers advanced solutions for
+          privileged access management, identity security, and secure access to
+          protect critical assets across hybrid IT environments.
+        </p>
+
+        <div class="card">
+          <div class="list-item">
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                margin-bottom: 8px;
+              "
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="#007bff"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 18l6-6-6-6"
+                  stroke="#007bff"
+                  stroke-width="1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span
+                >CyberArk provides Privileged Access Management (PAM) to protect
+                and manage privileged accounts.</span
+              >
+            </div>
+
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                margin-bottom: 8px;
+              "
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="#007bff"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 18l6-6-6-6"
+                  stroke="#007bff"
+                  stroke-width="1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span
+                >CyberArk records and monitors privileged sessions for
+                compliance and security auditing.</span
+              >
+            </div>
+
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                margin-bottom: 8px;
+              "
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="#007bff"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 18l6-6-6-6"
+                  stroke="#007bff"
+                  stroke-width="1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span
+                >The platform enforces least privilege access to minimize
+                unnecessary permissions.</span
+              >
+            </div>
+
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                margin-bottom: 8px;
+              "
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="#007bff"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 18l6-6-6-6"
+                  stroke="#007bff"
+                  stroke-width="1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span
+                >CyberArk detects and responds to threats targeting privileged
+                accounts in real-time.</span
+              >
+            </div>
+
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                margin-bottom: 8px;
+              "
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="#007bff"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 18l6-6-6-6"
+                  stroke="#007bff"
+                  stroke-width="1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span
+                >CyberArk extends security to cloud environments, including AWS,
+                Azure, and Google Cloud.</span
+              >
+            </div>
+
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                margin-bottom: 8px;
+              "
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="#007bff"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 18l6-6-6-6"
+                  stroke="#007bff"
+                  stroke-width="1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span
+                >It integrates with IAM systems to streamline user identity and
+                access management.</span
+              >
+            </div>
+
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                margin-bottom: 8px;
+              "
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="#007bff"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 18l6-6-6-6"
+                  stroke="#007bff"
+                  stroke-width="1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span
+                >Scales to meet the needs of both enterprise-level and
+                customer-facing solutions, ensuring flexibility and growth for
+                any organization.</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="service-content" id="okta">
+        <h2>Okta</h2>
+        <p>
+            The Okta Identity Platform integrates leading solutions for user authentication, identity lifecycle management, access control, and secure API protection.
+        </p>
+
+        <div class="card">
+          <div class="list-item">
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                margin-bottom: 8px;
+              "
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="#007bff"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 18l6-6-6-6"
+                  stroke="#007bff"
+                  stroke-width="1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span
+                >Combines best-in-class solutions for authentication, identity
+                governance, access management, and directory services.</span
+              >
+            </div>
+
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                margin-bottom: 8px;
+              "
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="#007bff"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 18l6-6-6-6"
+                  stroke="#007bff"
+                  stroke-width="1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span
+                >Manages the entire identity lifecycle, from user registration
+                to deactivation, ensuring a secure and compliant process.</span
+              >
+            </div>
+
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                margin-bottom: 8px;
+              "
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="#007bff"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 18l6-6-6-6"
+                  stroke="#007bff"
+                  stroke-width="1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span
+                >Enforces granular access control policies to regulate and
+                manage user access based on roles, context, and risk.</span
+              >
+            </div>
+
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                margin-bottom: 8px;
+              "
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="#007bff"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 18l6-6-6-6"
+                  stroke="#007bff"
+                  stroke-width="1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span
+                >Implements adaptive security mechanisms, adjusting
+                authentication and authorization methods based on user behavior
+                and risk profiles.</span
+              >
+            </div>
+
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                margin-bottom: 8px;
+              "
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="#007bff"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 18l6-6-6-6"
+                  stroke="#007bff"
+                  stroke-width="1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span
+                >Seamlessly integrates with external applications, services, and
+                cloud environments using standard protocols (e.g., OAuth, SAML,
+                OpenID Connect).</span
+              >
+            </div>
+
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                margin-bottom: 8px;
+              "
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="#007bff"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 18l6-6-6-6"
+                  stroke="#007bff"
+                  stroke-width="1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span
+                >Protects against data breaches, identity theft, and fraud by
+                providing advanced security measures and continuous
+                monitoring.</span
+              >
+            </div>
+
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                margin-bottom: 8px;
+              "
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="#007bff"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 18l6-6-6-6"
+                  stroke="#007bff"
+                  stroke-width="1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span
+                >Scales to meet the needs of both enterprise-level and
+                customer-facing solutions, ensuring flexibility and growth for
+                any organization.</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="service-content" id="ping">
+        <h2>Ping Identity</h2>
+        <p>
+          The Ping Identity Platform delivers advanced identity and access
+          management solutions, including federated identity, adaptive MFA, SSO
+          with OAuth/OpenID Connect, and API security, ensuring secure access
+          across hybrid and cloud environments.
+        </p>
+
+        <div class="card" id="ping1">
+          <div class="list-item">
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                margin-bottom: 8px;
+              "
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="#007bff"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 18l6-6-6-6"
+                  stroke="#007bff"
+                  stroke-width="1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span
+                >Combines best-in-class solutions for authentication, identity
+                governance, access management, and directory services.</span
+              >
+            </div>
+
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                margin-bottom: 8px;
+              "
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="#007bff"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 18l6-6-6-6"
+                  stroke="#007bff"
+                  stroke-width="1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span
+                >Manages the entire identity lifecycle, from user registration
+                to deactivation, ensuring a secure and compliant process.</span
+              >
+            </div>
+
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                margin-bottom: 8px;
+              "
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="#007bff"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 18l6-6-6-6"
+                  stroke="#007bff"
+                  stroke-width="1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span
+                >Enforces granular access control policies to regulate and
+                manage user access based on roles, context, and risk.</span
+              >
+            </div>
+
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                margin-bottom: 8px;
+              "
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="#007bff"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 18l6-6-6-6"
+                  stroke="#007bff"
+                  stroke-width="1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span
+                >Implements adaptive security mechanisms, adjusting
+                authentication and authorization methods based on user behavior
+                and risk profiles.</span
+              >
+            </div>
+
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                margin-bottom: 8px;
+              "
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="#007bff"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 18l6-6-6-6"
+                  stroke="#007bff"
+                  stroke-width="1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span
+                >Seamlessly integrates with external applications, services, and
+                cloud environments using standard protocols (e.g., OAuth, SAML,
+                OpenID Connect).</span
+              >
+            </div>
+
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                margin-bottom: 8px;
+              "
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="#007bff"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 18l6-6-6-6"
+                  stroke="#007bff"
+                  stroke-width="1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span
+                >Protects against data breaches, identity theft, and fraud by
+                providing advanced security measures and continuous
+                monitoring.</span
+              >
+            </div>
+
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                margin-bottom: 8px;
+              "
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="#007bff"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 18l6-6-6-6"
+                  stroke="#007bff"
+                  stroke-width="1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span
+                >Scales to meet the needs of both enterprise-level and
+                customer-facing solutions, ensuring flexibility and growth for
+                any organization.</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="service-content" id="azure">
+        <h2>Azure AD</h2>
+        <p>
+          The Azure Active Directory (Azure AD) platform combines top-tier
+          solutions for authentication, identity protection, access management,
+          and directory services.
+        </p>
+        <div class="card">
+          <div class="list-item">
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                margin-bottom: 8px;
+              "
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="#007bff"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 18l6-6-6-6"
+                  stroke="#007bff"
+                  stroke-width="1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span
+                >Combines best-in-class solutions for authentication, identity
+                governance, access management, and directory services.</span
+              >
+            </div>
+
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                margin-bottom: 8px;
+              "
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="#007bff"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 18l6-6-6-6"
+                  stroke="#007bff"
+                  stroke-width="1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span
+                >Manages the entire identity lifecycle, from user registration
+                to deactivation, ensuring a secure and compliant process.</span
+              >
+            </div>
+
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                margin-bottom: 8px;
+              "
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="#007bff"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 18l6-6-6-6"
+                  stroke="#007bff"
+                  stroke-width="1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span
+                >Enforces granular access control policies to regulate and
+                manage user access based on roles, context, and risk.</span
+              >
+            </div>
+
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                margin-bottom: 8px;
+              "
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="#007bff"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 18l6-6-6-6"
+                  stroke="#007bff"
+                  stroke-width="1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span
+                >Implements adaptive security mechanisms, adjusting
+                authentication and authorization methods based on user behavior
+                and risk profiles.</span
+              >
+            </div>
+
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                margin-bottom: 8px;
+              "
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="#007bff"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 18l6-6-6-6"
+                  stroke="#007bff"
+                  stroke-width="1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span
+                >Seamlessly integrates with external applications, services, and
+                cloud environments using standard protocols (e.g., OAuth, SAML,
+                OpenID Connect).</span
+              >
+            </div>
+
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                margin-bottom: 8px;
+              "
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="#007bff"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 18l6-6-6-6"
+                  stroke="#007bff"
+                  stroke-width="1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span
+                >Protects against data breaches, identity theft, and fraud by
+                providing advanced security measures and continuous
+                monitoring.</span
+              >
+            </div>
+
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                margin-bottom: 8px;
+              "
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="#007bff"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 18l6-6-6-6"
+                  stroke="#007bff"
+                  stroke-width="1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span
+                >Scales to meet the needs of both enterprise-level and
+                customer-facing solutions, ensuring flexibility and growth for
+                any organization.</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <div id="footer-container"></div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-    <script src="script.js">
-        
-    </script>
-
-</body>
-
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
 </html>
